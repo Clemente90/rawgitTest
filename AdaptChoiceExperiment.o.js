@@ -1,63 +1,63 @@
 'use strict'
 
-let OANX = function (GXGJ) {console.log(GXGJ);}
+let VLQR = function (ULRX) {console.log(ULRX);}
 
-function OGTB(SSMV){
-  let NIGM = 0.0;
-  SSMV.forEach(function(GXGJ) {
-    NIGM += GXGJ;
+function MPUS(BVND){
+  let XKNS = 0.0;
+  BVND.forEach(function(ULRX) {
+    XKNS += ULRX;
   });
-  NIGM /= SSMV.BLWE;
-  return NIGM;
+  XKNS /= BVND.XKOM;
+  return XKNS;
 }
 
-function BOXE(SSMV){
-  let ECZC = mean(SSMV);
-  let NIGM = 0.0;
-  SSMV.forEach(function(GXGJ){
-    NIGM += Math.abs(GXGJ - ECZC);
+function JKDC(BVND){
+  let QMID = mean(BVND);
+  let XKNS = 0.0;
+  BVND.forEach(function(ULRX){
+    XKNS += Math.abs(ULRX - QMID);
   });
-  NIGM /= SSMV.length;
-  return NIGM;
+  XKNS /= BVND.length;
+  return XKNS;
 }
 
-function HBRN(SSMV){
-  let NIGM = stdev(SSMV) / Math.sqrt(SSMV.length);
-  return NIGM;
+function DOGP(BVND){
+  let XKNS = stdev(BVND) / Math.sqrt(BVND.length);
+  return XKNS;
 }
 
-function AKJP(KTWN, CYUF, UMDW=false){
-  if (UMDW == false){
-    return Math.floor(Math.random() * (CYUF-KTWN)) + KTWN;
+function NQHU(PEFI, YMJC, DMZK=false){
+  if (DMZK == false){
+    return Math.floor(Math.random() * (YMJC-PEFI)) + PEFI;
   } else {
-    return Math.floor(Math.random() * (CYUF-KTWN+1)) + KTWN;
+    return Math.floor(Math.random() * (YMJC-PEFI+1)) + PEFI;
   }
 }
 
-function VFQB(KTWN, CYUF, UMDW=false){
-  if (UMDW == false){
-    return Math.random() * (CYUF-KTWN) + KTWN;
+function HHPX(PEFI, YMJC, DMZK=false){
+  if (DMZK == false){
+    return Math.random() * (YMJC-PEFI) + PEFI;
   } else {
-    return Math.random() * (CYUF-KTWN+1) + KTWN;
+    return Math.random() * (YMJC-PEFI+1) + PEFI;
   }
 }
 
-function BJWV(ZCHY){
-  let WRJM = undefined;
-  let EATA = undefined;
-  for (let XKKJ = ZCHY.length-1; XKKJ >=0; XKKJ--){
-    WRJM = AKJP(0,XKKJ,true);
-    EATA = ZCHY[WRJM];
-    ZCHY[WRJM] = ZCHY[XKKJ];
-    ZCHY[XKKJ] = EATA;
+function TZPX(NDRY){
+  let YCLP = undefined;
+  let VMJS = undefined;
+  for (let HSYT = NDRY.length-1; HSYT >=0; HSYT--){
+    YCLP = NQHU(0,HSYT,true);
+    VMJS = NDRY[YCLP];
+    NDRY[YCLP] = NDRY[HSYT];
+    NDRY[HSYT] = VMJS;
   }
-  return ZCHY;
+  return NDRY;
 }
 
-function QRZG(KHEZ){
+function CEXI(GVNM){
   try{
-    KHEZ.ILQR();
-  }catch(IDFL){
+    GVNM.TLXP();
+  }catch(CQHB){
   }finally{
     return undefined;
   }
@@ -65,34 +65,34 @@ function QRZG(KHEZ){
 
 
 
-function RRII (){  // This is a CLASS definition.
-  let BSUK = this;
+function HGLE (){  // This is a CLASS definition.
+  let DSWG = this;
 
-  BSUK.OZVC = (!!window.opr && !!opr.addons) ||
+  DSWG.FURS = (!!window.opr && !!opr.addons) ||
                   !!window.opera ||
                   0 <= navigator.userAgent.indexOf(' OPR/');
-  BSUK.ZAKH = 'undefined' !== typeof InstallTrigger;
-  BSUK.GLFW = /constructor/i.test(window.HTMLElement) ||
+  DSWG.QCWG = 'undefined' !== typeof InstallTrigger;
+  DSWG.ALJM = /constructor/i.test(window.HTMLElement) ||
                   '[object SafariRemoteNotification]' === (!window.safari ||
                   ('undefined' !== typeof safari && safari.pushNotification)).toString();
-  BSUK.ACOP = !!document.documentMode;
-  BSUK.EQQV = !BSUK.ACOP && !!window.StyleMedia;
-  BSUK.VQZA = !!window.chrome && !!window.chrome.webstore;
-  BSUK.DZNS = ((BSUK.VQZA = !!window.chrome &&
+  DSWG.OFTB = !!document.documentMode;
+  DSWG.MEGR = !DSWG.OFTB && !!window.StyleMedia;
+  DSWG.TEIY = !!window.chrome && !!window.chrome.webstore;
+  DSWG.LSPK = ((DSWG.TEIY = !!window.chrome &&
                    !!window.chrome.webstore) ||
-                   BSUK.OZVC) && !!window.CSS;
-  BSUK.APAU = BSUK.OZVC ? "Opera" :
-                    (BSUK.ZAKH ? "Firefox" :
-                    (BSUK.GLFW ? "Safari" :
-                    (BSUK.ACOP ? "IE" :
-                    (BSUK.EQQV ? "Edge" :
-                    (BSUK.VQZA ? "Chrome" :
+                   DSWG.FURS) && !!window.CSS;
+  DSWG.IDJQ = DSWG.FURS ? "Opera" :
+                    (DSWG.QCWG ? "Firefox" :
+                    (DSWG.ALJM ? "Safari" :
+                    (DSWG.OFTB ? "IE" :
+                    (DSWG.MEGR ? "Edge" :
+                    (DSWG.TEIY ? "Chrome" :
                     "Unknown Browser")))))
-  BSUK.EXKR = window.devicePixelRatio;
-  BSUK.EQLL = $(window).height();
-  BSUK.NUYZ = $(window).width();
-  BSUK.IUIP = Math.round(BSUK.EXKR * BSUK.EQLL);
-  BSUK.CUOC = Math.round(BSUK.EXKR * BSUK.NUYZ);
+  DSWG.TTAK = window.devicePixelRatio;
+  DSWG.WPWI = $(window).height();
+  DSWG.CGQJ = $(window).width();
+  DSWG.JLUF = Math.round(DSWG.TTAK * DSWG.WPWI);
+  DSWG.VZHT = Math.round(DSWG.TTAK * DSWG.CGQJ);
 }
 
 
@@ -101,456 +101,457 @@ function RRII (){  // This is a CLASS definition.
 
 function UserData()  // This is a CLASS definition
 {
-  let BSUK = this;
-  BSUK.data = [];
-  BSUK.push = function(datum) { BSUK.data.push(datum); }
+  let DSWG = this;
+  DSWG.data = [];
+  DSWG.push = function(datum) { DSWG.data.push(datum); }
 }
 function UserDatum(type, value, timestamp=performance.now())  // This is a CLASS definition
 {
-  let BSUK = this;
-  BSUK.type = type;
-  BSUK.value = value;
-  BSUK.timestamp = timestamp;
+  let DSWG = this;
+  DSWG.type = type;
+  DSWG.value = value;
+  DSWG.timestamp = timestamp;
 }
 
 
-function Experiment(JFTI)  // This is a CLASS definition
+function Experiment(ZAZV)  // This is a CLASS definition
 {
-  let BSUK = this;
+  let DSWG = this;
   { // Initialize the CLASS's properties ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    BSUK.FOZL = new Object;
-      BSUK.FOZL.BWLA = "Adaptive Choice Visual Search Task";
+    DSWG.LITQ = new Object;
+      DSWG.LITQ.AKVB = "Adaptive Choice Visual Search Task";
+      console.log(0.1);
 
-      BSUK.FOZL.JBIE = 90;  // percent relative to browser minimum dimension.
-      BSUK.FOZL.YYJI = 45;  // percent relative to browser minimum dimension.
-      BSUK.FOZL.YTOG = 4;  // percent relative to the browser minimum dimension.
+      DSWG.LITQ.WIHF = 90;  // percent relative to browser minimum dimension.
+      DSWG.LITQ.JLDS = 45;  // percent relative to browser minimum dimension.
+      DSWG.LITQ.NDTY = 4;  // percent relative to the browser minimum dimension.
 
-      BSUK.FOZL.FOTI = "rgb(255,255,255)";
+      DSWG.LITQ.BKZX = "rgb(255,255,255)";
 
-      BSUK.FOZL.GBYL = "rgb( 255,   0,   0 )";
-      BSUK.FOZL.RZRM = "rgb(   0,   0, 255 )";
-      BSUK.FOZL.OODZ = "rgb(   0, 255,   0 )";
-      //BSUK.FOZL.GBYL = "rgb(  27, 158, 119 )"; // colorblind friendly colors
-      //BSUK.FOZL.RZRM = "rgb( 217,  95,   2 )";
-      //BSUK.FOZL.OODZ = "rgb( 117, 112, 179 )";
+      DSWG.LITQ.HDXM = "rgb( 255,   0,   0 )";
+      DSWG.LITQ.RNNC = "rgb(   0,   0, 255 )";
+      DSWG.LITQ.YBXT = "rgb(   0, 255,   0 )";
+      //DSWG.LITQ.HDXM = "rgb(  27, 158, 119 )"; // colorblind friendly colors
+      //DSWG.LITQ.RNNC = "rgb( 217,  95,   2 )";
+      //DSWG.LITQ.YBXT = "rgb( 117, 112, 179 )";
 
-      BSUK.FOZL.KBPV = [12, 18, 24];
-      BSUK.FOZL.MGMA    = 12;  // for each color_1 and color_2
-      BSUK.FOZL.SUXM = 14;  // for color_1 or color_2
-      BSUK.FOZL.AAID      = 14;  // for color_3
+      DSWG.LITQ.QECH = [12, 18, 24];
+      DSWG.LITQ.LUPG    = 12;  // for each color_1 and color_2
+      DSWG.LITQ.GPIS = 14;  // for color_1 or color_2
+      DSWG.LITQ.QSGT      = 14;  // for color_3
 
-      BSUK.FOZL.CWRI     = [ 2, 3, 4, 5 ];
-      BSUK.FOZL.DGJO = [ 6, 7, 8, 9 ];
-      BSUK.FOZL.MDIJ       = new Map([[ "v", BSUK.FOZL.CWRI[0]],
-                                                  [ "b", BSUK.FOZL.CWRI[1]],
-                                                  [ "n", BSUK.FOZL.CWRI[2]],
-                                                  [ "m", BSUK.FOZL.CWRI[3]]])
+      DSWG.LITQ.IIWX     = [ 2, 3, 4, 5 ];
+      DSWG.LITQ.OSQQ = [ 6, 7, 8, 9 ];
+      DSWG.LITQ.BRVG       = new Map([[ "v", DSWG.LITQ.IIWX[0]],
+                                                  [ "b", DSWG.LITQ.IIWX[1]],
+                                                  [ "n", DSWG.LITQ.IIWX[2]],
+                                                  [ "m", DSWG.LITQ.IIWX[3]]])
 
-    BSUK.JFTI = JFTI;
-    BSUK.HGCP = -1;
-    BSUK.BPSK = new UserData();
-    BSUK.BPSK.push( new UserDatum("event", "experiment_initialized") );
+    DSWG.ZAZV = ZAZV;
+    DSWG.DVNJ = -1;
+    DSWG.FRMB = new UserData();
+    DSWG.FRMB.push( new UserDatum("event", "experiment_initialized") );
   } // end properties
 
   { // Define the CLASS's methods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    BSUK.run = function (){
-      let YZFM = [[BSUK.TLDE, null],
-                    [BSUK.FPTH, null],
-                    [BSUK.RLNU, null],
-                    [BSUK.CSQE, [3]],
-                    [BSUK.LNJY, [0, 5]],
-                    [BSUK.LNJY, [1, 5]],
-                    [BSUK.LNJY, [2, 5]],
-                    [BSUK.SARR, null]];
-      if (BSUK.HGCP < (YZFM.length-1)){
-        BSUK.HGCP++;
-        let XKKJ = BSUK.HGCP;
-        YZFM[XKKJ][0].apply(null,YZFM[XKKJ][1]);
+    DSWG.run = function (){
+      let TNRY = [[DSWG.LVWJ, null],
+                    [DSWG.ULJO, null],
+                    [DSWG.POLH, null],
+                    [DSWG.BWCZ, [3]],
+                    [DSWG.LSXK, [0, 5]],
+                    [DSWG.LSXK, [1, 5]],
+                    [DSWG.LSXK, [2, 5]],
+                    [DSWG.FDKH, null]];
+      if (DSWG.DVNJ < (TNRY.length-1)){
+        DSWG.DVNJ++;
+        let HSYT = DSWG.DVNJ;
+        TNRY[HSYT][0].apply(null,TNRY[HSYT][1]);
       }
     }
 
 
-    BSUK.HTHN = function(){
+    DSWG.CECY = function(){
       d3.selectAll("#workspace").data([]).exit().remove();
-      JFTI.selectAll("div").data([1])
+      ZAZV.selectAll("div").data([1])
         .enter().append("div")
           .attr("id", "workspace");
       return d3.select("#workspace");
     }
 
-    BSUK.UTLN = function(){
+    DSWG.OPGN = function(){
       d3.selectAll(".headeR").data([]).exit().remove();
     }
 
 
-    BSUK.TLDE = function(){
-      let AWWD = BSUK.HTHN();
-      let CYMA = [ "<hr>",
+    DSWG.LVWJ = function(){
+      let UYIW = DSWG.CECY();
+      let SEAA = [ "<hr>",
                    "Running Self Tests ... Completed",
                    "<hr>",
                    "Continue?"
                  ]
-      AWWD.selectAll("p").data(CYMA)
+      UYIW.selectAll("p").data(SEAA)
         .enter().append("p")
           .html(function(d){return d;});
 
-      let HRWN = AWWD.selectAll("button").data(["Yes"]).enter().append("button");
-      HRWN.text(function(d){return d;});
-      HRWN.attr("id", function(d){return d;});
-      HRWN.on("click", function(){BSUK.run();})
+      let TAIY = UYIW.selectAll("button").data(["Yes"]).enter().append("button");
+      TAIY.text(function(d){return d;});
+      TAIY.attr("id", function(d){return d;});
+      TAIY.on("click", function(){DSWG.run();})
     }
 
 
-    BSUK.FPTH = function(){
-      let AWWD = BSUK.HTHN();
+    DSWG.ULJO = function(){
+      let UYIW = DSWG.CECY();
 
-      let QMWS = new RRII();
-      let CYMA = [ "<hr>",
-                   "Browser Name: " + QMWS.APAU,
-                   "Browser's Screen Width: " + QMWS.CUOC,
-                   "Browser's Screen Height: " + QMWS.IUIP,
+      let OGAT = new HGLE();
+      let SEAA = [ "<hr>",
+                   "Browser Name: " + OGAT.IDJQ,
+                   "Browser's Screen Width: " + OGAT.VZHT,
+                   "Browser's Screen Height: " + OGAT.JLUF,
                    "<hr>",
                    "Will you allow us to collect the above information?"
                  ]
 
-      AWWD.selectAll("p").data(CYMA)
+      UYIW.selectAll("p").data(SEAA)
         .enter().append("p")
-          .html(function(TWKW){return TWKW;});
+          .html(function(KWOL){return KWOL;});
 
-      let HRWN = AWWD.selectAll("button").data(["Yes"]).enter().append("button");
-      HRWN.text(function(TWKW){return TWKW;});
-      HRWN.attr("id", function(TWKW){return TWKW;});
-      HRWN.on("click", function(){BSUK.run();})
+      let TAIY = UYIW.selectAll("button").data(["Yes"]).enter().append("button");
+      TAIY.text(function(KWOL){return KWOL;});
+      TAIY.attr("id", function(KWOL){return KWOL;});
+      TAIY.on("click", function(){DSWG.run();})
     }
 
 
-    BSUK.RLNU = function(){
-      let AWWD = BSUK.HTHN();
-      let CYMA = [ "<hr>",
+    DSWG.POLH = function(){
+      let UYIW = DSWG.CECY();
+      let SEAA = [ "<hr>",
                    "Instructions!",
                    "<hr>",
                    "Click to start tutorial:"
                  ]
-      AWWD.selectAll("p").data(CYMA)
+      UYIW.selectAll("p").data(SEAA)
         .enter().append("p")
-          .html(function(TWKW){return TWKW});
+          .html(function(KWOL){return KWOL});
 
-      let HRWN = AWWD.selectAll("button").data(["Yes"]).enter().append("button");
-      HRWN.text(function(TWKW){return TWKW;});
-      HRWN.attr("id", function(TWKW){return TWKW;});
-      HRWN.on("click", function(){BSUK.run();})
+      let TAIY = UYIW.selectAll("button").data(["Yes"]).enter().append("button");
+      TAIY.text(function(KWOL){return KWOL;});
+      TAIY.attr("id", function(KWOL){return KWOL;});
+      TAIY.on("click", function(){DSWG.run();})
     }
 
 
-    BSUK.CSQE = function(XHQT=1){
-      let AWWD = BSUK.HTHN();
-      BSUK.LNJY(-1, XHQT);  //TODO(KAL)
+    DSWG.BWCZ = function(DJOY=1){
+      let UYIW = DSWG.CECY();
+      DSWG.LSXK(-1, DJOY);  //TODO(KAL)
     }
 
 
-    BSUK.LNJY = function(VABP, XHQT=1){
-      function JJGE(THDV, DYHI, GBEO=false){
-        let BSUK = this;
-        if (GBEO == true){
-          BSUK.THDV = AKJP(0, 9, true);
-          let TFVA = AKJP(0, 2, true);
-          if (TFVA == 0) { BSUK.DYHI = BSUK.FOZL.GBYL; }
-          else if (TFVA == 1) { BSUK.DYHI = BSUK.FOZL.RZRM; }
-          else { BSUK.DYHI = BSUK.FOZL.OODZ; }
+    DSWG.LSXK = function(EQUF, DJOY=1){
+      function XEGJ(PXZE, ZFKR, FIVJ=false){
+        let DSWG = this;
+        if (FIVJ == true){
+          DSWG.PXZE = NQHU(0, 9, true);
+          let TTYR = NQHU(0, 2, true);
+          if (TTYR == 0) { DSWG.ZFKR = DSWG.LITQ.HDXM; }
+          else if (TTYR == 1) { DSWG.ZFKR = DSWG.LITQ.RNNC; }
+          else { DSWG.ZFKR = DSWG.LITQ.YBXT; }
         } else {
-          BSUK.THDV = THDV;
-          BSUK.DYHI = DYHI;
+          DSWG.PXZE = PXZE;
+          DSWG.ZFKR = ZFKR;
         }
-        return BSUK;
+        return DSWG;
       }
 
 
-      let XYXD = undefined;
-      let IJBL = undefined;
-      function UZYK(){
-        function XNXQ(ZCHY, FYOE=null){
-          let SEJG = AKJP(0, ZCHY.length);
-          let DTGG = ZCHY[SEJG];
-          if (DTGG === FYOE){
-            return XNXQ(ZCHY, FYOE);
+      let ZCWK = undefined;
+      let EKLO = undefined;
+      function YZYB(){
+        function NRIW(NDRY, FVZN=null){
+          let YATT = NQHU(0, NDRY.length);
+          let GAIX = NDRY[YATT];
+          if (GAIX === FVZN){
+            return NRIW(NDRY, FVZN);
           }
-          return DTGG;
+          return GAIX;
         }
 
-        let BATR = [];
+        let PECA = [];
 
         { // Push Back Targets:
-          XYXD = XNXQ(BSUK.FOZL.CWRI);
-          IJBL = XNXQ(BSUK.FOZL.CWRI, XYXD);
-          BATR.push( new JJGE(XYXD, BSUK.FOZL.GBYL) );
-          BATR.push( new JJGE(IJBL, BSUK.FOZL.RZRM) );
+          ZCWK = NRIW(DSWG.LITQ.IIWX);
+          EKLO = NRIW(DSWG.LITQ.IIWX, ZCWK);
+          PECA.push( new XEGJ(ZCWK, DSWG.LITQ.HDXM) );
+          PECA.push( new XEGJ(EKLO, DSWG.LITQ.RNNC) );
         }
         { // Push Color_1, Color_2, and Color_3 fixed distractors
-          let FAYF = undefined;
-          let EIJL = BSUK.FOZL.MGMA;
-          for (let XKKJ = 0; XKKJ < EIJL; XKKJ++){
-            FAYF = XNXQ(BSUK.FOZL.DGJO);
-            BATR.push( new JJGE(FAYF, BSUK.FOZL.GBYL) );
+          let QGBV = undefined;
+          let FNCX = DSWG.LITQ.LUPG;
+          for (let HSYT = 0; HSYT < FNCX; HSYT++){
+            QGBV = NRIW(DSWG.LITQ.OSQQ);
+            PECA.push( new XEGJ(QGBV, DSWG.LITQ.HDXM) );
           }
-          EIJL = BSUK.FOZL.MGMA;
-          for (let XKKJ = 0; XKKJ < EIJL; XKKJ++){
-            FAYF = XNXQ(BSUK.FOZL.DGJO);
-            BATR.push( new JJGE(FAYF, BSUK.FOZL.RZRM) );
+          FNCX = DSWG.LITQ.LUPG;
+          for (let HSYT = 0; HSYT < FNCX; HSYT++){
+            QGBV = NRIW(DSWG.LITQ.OSQQ);
+            PECA.push( new XEGJ(QGBV, DSWG.LITQ.RNNC) );
           }
-          EIJL = BSUK.FOZL.AAID;
-          for (let XKKJ = 0; XKKJ < EIJL; XKKJ++){
-            FAYF = XNXQ(BSUK.FOZL.DGJO);
-            BATR.push( new JJGE(FAYF, BSUK.FOZL.OODZ) );
+          FNCX = DSWG.LITQ.QSGT;
+          for (let HSYT = 0; HSYT < FNCX; HSYT++){
+            QGBV = NRIW(DSWG.LITQ.OSQQ);
+            PECA.push( new XEGJ(QGBV, DSWG.LITQ.YBXT) );
           }
         }
         { // Push Color_1 and Color_2 variable distractors
-          let FAYF = undefined;
-          let EBSW = undefined;
-          let HLFD = [ BSUK.FOZL.GBYL, BSUK.FOZL.RZRM ]
-          let EIJL = BSUK.FOZL.SUXM;
-          for (let XKKJ = 0; XKKJ < EIJL; XKKJ++){
-            FAYF = XNXQ(BSUK.FOZL.DGJO);
-            EBSW = XNXQ(HLFD);
-            BATR.push( new JJGE(FAYF, EBSW) );
+          let QGBV = undefined;
+          let IPDM = undefined;
+          let HGCP = [ DSWG.LITQ.HDXM, DSWG.LITQ.RNNC ]
+          let FNCX = DSWG.LITQ.GPIS;
+          for (let HSYT = 0; HSYT < FNCX; HSYT++){
+            QGBV = NRIW(DSWG.LITQ.OSQQ);
+            IPDM = NRIW(HGCP);
+            PECA.push( new XEGJ(QGBV, IPDM) );
           }
         }
-        let NIGM = undefined;
+        let XKNS = undefined;
         { // randomize order and split into sub-arrays
-          let SETL = BJWV(BATR);
-          let ZCHY = BSUK.FOZL.KBPV[0];
-          let QQUW = BSUK.FOZL.KBPV[1];
-          let NIXX = BSUK.FOZL.KBPV[2];
-          NIGM = [SETL.slice(ZCHY+QQUW, ZCHY+QQUW+NIXX),
-                    SETL.slice(ZCHY, ZCHY+QQUW),
-                    SETL.slice(0, ZCHY)];
+          let NJNA = TZPX(PECA);
+          let NDRY = DSWG.LITQ.QECH[0];
+          let ZIRZ = DSWG.LITQ.QECH[1];
+          let LEPW = DSWG.LITQ.QECH[2];
+          XKNS = [NJNA.slice(NDRY+ZIRZ, NDRY+ZIRZ+LEPW),
+                    NJNA.slice(NDRY, NDRY+ZIRZ),
+                    NJNA.slice(0, NDRY)];
         }
 
-        return NIGM;
+        return XKNS;
       }
 
-      function RSGF(MRWE){
-        BSUK.BPSK.push( new UserDatum("event.key_press.trial-"+RBPO, MRWE) );
-        if (BSUK.FOZL.MDIJ.has(MRWE))
+      function DCWS(CHYT){
+        DSWG.FRMB.push( new UserDatum("event.key_press.trial-"+LYOX, CHYT) );
+        if (DSWG.LITQ.BRVG.has(CHYT))
         {
-          MVWU.TIXE();
-          KRES.POPB();
-          let DPMJ = "data.in.user_answer.block-" + VABP + ".trial-" + RBPO;
-          if (BSUK.FOZL.MDIJ.get(MRWE) == XYXD)
+          VPNY.QLZI();
+          HXXK.SYZO();
+          let RSDT = "data.in.user_answer.block-" + EQUF + ".trial-" + LYOX;
+          if (DSWG.LITQ.BRVG.get(CHYT) == ZCWK)
           {
-            BSUK.BPSK.push( new UserDatum(DPMJ, "correct_1") );
-            MOOT++;
-          } else if (BSUK.FOZL.MDIJ.get(MRWE) == IJBL) {
-            BSUK.BPSK.push( new UserDatum(DPMJ, "correct_2") );
-            MOOT++;
+            DSWG.FRMB.push( new UserDatum(RSDT, "correct_1") );
+            UMWZ++;
+          } else if (DSWG.LITQ.BRVG.get(CHYT) == EKLO) {
+            DSWG.FRMB.push( new UserDatum(RSDT, "correct_2") );
+            UMWZ++;
           } else {
-            BSUK.BPSK.push( new UserDatum(DPMJ, "incorrect") );
+            DSWG.FRMB.push( new UserDatum(RSDT, "incorrect") );
           }
-          BSUK.BPSK.push( new UserDatum("event.block-"+VABP+".trial-"+RBPO, "chart_cleared") );
-          setTimeout(DAAJ, 500);
+          DSWG.FRMB.push( new UserDatum("event.block-"+EQUF+".trial-"+LYOX, "chart_cleared") );
+          setTimeout(BLJF, 500);
         }
       }
-      let RBPO = 0;
-      function DAAJ() {
-        if (RBPO < XHQT){
-          RBPO++;
-          let CYMA = UZYK();
-          BSUK.BPSK.push( new UserDatum("data.chart_data.block-"+VABP+".trial-"+RBPO, CYMA) );
-          KRES.QWLN( CYMA );
-          KRES.XSZZ();
-          MVWU.SXIH();
-          BSUK.BPSK.push( new UserDatum("event.block-"+VABP+".trial-"+RBPO, "chart_shown") );
-          //OANX(BSUK.BPSK);
+      let LYOX = 0;
+      function BLJF() {
+        if (LYOX < DJOY){
+          LYOX++;
+          let SEAA = YZYB();
+          DSWG.FRMB.push( new UserDatum("data.chart_data.block-"+EQUF+".trial-"+LYOX, SEAA) );
+          HXXK.VEJE( SEAA );
+          HXXK.BBWZ();
+          VPNY.HBJE();
+          DSWG.FRMB.push( new UserDatum("event.block-"+EQUF+".trial-"+LYOX, "chart_shown") );
+          //VLQR(DSWG.FRMB);
         } else {
-          KRES = QRZG(KRES);
-          MVWU = QRZG(MVWU);
+          HXXK = CEXI(HXXK);
+          VPNY = CEXI(VPNY);
           alert("You have finished this block!");
-          NAHG();
+          JWBN();
         }
       }
-      function NAHG() {
-        NDZJ = MOOT / XHQT;
-        BSUK.BPSK.push( new UserDatum("event.block-"+VABP+".num_trials", XHQT) );
-        BSUK.BPSK.push( new UserDatum("event.block-"+VABP+".num_correct", MOOT) );
-        BSUK.BPSK.push( new UserDatum("event.block-"+VABP+".accuracy", NDZJ) );
-        alert("Your accuracy for this block was: " + NDZJ*100 + "%");
-        BSUK.run();
+      function JWBN() {
+        PNUK = UMWZ / DJOY;
+        DSWG.FRMB.push( new UserDatum("event.block-"+EQUF+".num_trials", DJOY) );
+        DSWG.FRMB.push( new UserDatum("event.block-"+EQUF+".num_correct", UMWZ) );
+        DSWG.FRMB.push( new UserDatum("event.block-"+EQUF+".accuracy", PNUK) );
+        alert("Your accuracy for this block was: " + PNUK*100 + "%");
+        DSWG.run();
       }
 
       // Start:
-      let AWWD = BSUK.HTHN();
-      BSUK.UTLN();
-      let MVWU = new RWXW(RSGF);
-      let KRES = new FLBV(AWWD);
-      KRES.RPRT( BSUK.FOZL.YYJI );
-      KRES.GWMW( BSUK.FOZL.YTOG );
-      KRES.WWBZ( BSUK.FOZL.FOTI );
-      let MOOT = 0;
-      let NDZJ = 0.0;
-      DAAJ();
+      let UYIW = DSWG.CECY();
+      DSWG.OPGN();
+      let VPNY = new XVTJ(DCWS);
+      let HXXK = new JELU(UYIW);
+      HXXK.VOIZ( DSWG.LITQ.JLDS );
+      HXXK.KHCK( DSWG.LITQ.NDTY );
+      HXXK.SICS( DSWG.LITQ.BKZX );
+      let UMWZ = 0;
+      let PNUK = 0.0;
+      BLJF();
     }
 
-    BSUK.SARR = function() {
-      let AWWD = BSUK.HTHN();
+    DSWG.FDKH = function() {
+      let UYIW = DSWG.CECY();
 
-      let MNRK = d3.selectAll("#user_result");
-      MNRK.attr("value", JSON.stringify(BSUK.BPSK.data));
+      let YKPN = d3.selectAll("#user_result");
+      YKPN.attr("value", JSON.stringify(DSWG.FRMB.data));
       console.log("HERE:");
-      console.log(JSON.stringify(BSUK.BPSK.data));
+      console.log(JSON.stringify(DSWG.FRMB.data));
 
-      let HQVI = d3.selectAll("#submitButton");
-      HQVI.style("display", "block");
+      let UJVG = d3.selectAll("#submitButton");
+      UJVG.style("display", "block");
     }
 
-    BSUK.BSJY = function(){}
+    DSWG.JPZR = function(){}
   }  // end methods
 }  // end Experiment
 
 
 
-function FLBV(OHBN)  // This is a CLASS definition.
+function JELU(JREX)  // This is a CLASS definition.
 {
-  let BSUK = this;
+  let DSWG = this;
 
-  BSUK.OHBN = OHBN;
-  BSUK.XMJT = 0;
-  BSUK.YTOG = 0;
-  BSUK.FOTI = 0;
-  BSUK.CYMA = 0;
+  DSWG.JREX = JREX;
+  DSWG.QFEU = 0;
+  DSWG.NDTY = 0;
+  DSWG.BKZX = 0;
+  DSWG.SEAA = 0;
 
-  BSUK.ILQR = function() {
-    BSUK.OHBN.selectAll("svg").data([]).exit().remove();
-    window.removeEventListener("resize", BSUK.XSZZ);
+  DSWG.TLXP = function() {
+    DSWG.JREX.selectAll("svg").data([]).exit().remove();
+    window.removeEventListener("resize", DSWG.BBWZ);
   }
-  BSUK.POPB = function() {
-    BSUK.OHBN.selectAll("text").data([]).exit().remove();
-    BSUK.OHBN.selectAll("rect").data([]).exit().remove();
+  DSWG.SYZO = function() {
+    DSWG.JREX.selectAll("text").data([]).exit().remove();
+    DSWG.JREX.selectAll("rect").data([]).exit().remove();
   }
-  BSUK.RPRT = function(RNCI){ BSUK.XMJT = RNCI; }
-  BSUK.GWMW = function(LUTJ){ BSUK.YTOG = LUTJ; }
-  BSUK.WWBZ = function(DYHI){ BSUK.FOTI = DYHI; }
-  BSUK.QWLN = function(CYMA){ BSUK.CYMA = CYMA; }
-  BSUK.XSZZ = function(){
-    let BYMI;
+  DSWG.VOIZ = function(IHVD){ DSWG.QFEU = IHVD; }
+  DSWG.KHCK = function(BADR){ DSWG.NDTY = BADR; }
+  DSWG.SICS = function(ZFKR){ DSWG.BKZX = ZFKR; }
+  DSWG.VEJE = function(SEAA){ DSWG.SEAA = SEAA; }
+  DSWG.BBWZ = function(){
+    let DSOW;
     { // create svg element
-      BYMI = BSUK.OHBN.selectAll("svg").data([1]);
-      BYMI.enter().append("svg")
+      DSOW = DSWG.JREX.selectAll("svg").data([1]);
+      DSOW.enter().append("svg")
         .attr("height", "95vh")
         .attr("width", "95vmin");
-      BYMI.exit().remove();
-      BYMI = BSUK.OHBN.selectAll("svg");
+      DSOW.exit().remove();
+      DSOW = DSWG.JREX.selectAll("svg");
     }
 
     { // draw cross
-      let ZCHY = BSUK.YTOG / 2;
-      let HKZK = {JVOF:49*.9+ZCHY+"vmin", BZQW:51*.9+ZCHY+"vmin",
-                   ALML:50*.9+ZCHY+"vmin", LEBZ:50*.9+ZCHY+"vmin",
-                   LZLM:2, NIXX:BSUK.FOTI};
+      let NDRY = DSWG.NDTY / 2;
+      let HFTY = {QLUN:49*.9+NDRY+"vmin", LNXA:51*.9+NDRY+"vmin",
+                   KNJL:50*.9+NDRY+"vmin", PKEJ:50*.9+NDRY+"vmin",
+                   QBHL:2, LEPW:DSWG.BKZX};
 
-      let LSBE = {ALML:49*.9+ZCHY+"vmin", LEBZ:51*.9+ZCHY+"vmin",
-                   JVOF:50*.9+ZCHY+"vmin", BZQW:50*.9+ZCHY+"vmin",
-                   LZLM:2, NIXX:BSUK.FOTI};
+      let GXCK = {KNJL:49*.9+NDRY+"vmin", PKEJ:51*.9+NDRY+"vmin",
+                   QLUN:50*.9+NDRY+"vmin", LNXA:50*.9+NDRY+"vmin",
+                   QBHL:2, LEPW:DSWG.BKZX};
 
-      let KEIK = BYMI.selectAll("line").data( [HKZK, LSBE] );
-      KEIK.attr("x1", function(TWKW){return TWKW.JVOF;})
-          .attr("x2", function(TWKW){return TWKW.BZQW;})
-          .attr("y1", function(TWKW){return TWKW.ALML;})
-          .attr("y2", function(TWKW){return TWKW.LEBZ;})
-          .attr("stroke", function(TWKW){return TWKW.NIXX;})
-          .attr("stroke-width", function(TWKW){return TWKW.LZLM;});
-      KEIK.enter().append("line")
-          .attr("x1", function(TWKW){return TWKW.JVOF;})
-          .attr("x2", function(TWKW){return TWKW.BZQW;})
-          .attr("y1", function(TWKW){return TWKW.ALML;})
-          .attr("y2", function(TWKW){return TWKW.LEBZ;})
-          .attr("stroke", function(TWKW){return TWKW.NIXX;})
-          .attr("stroke-width", function(TWKW){return TWKW.LZLM;});
-      KEIK.exit().remove();
+      let GELL = DSOW.selectAll("line").data( [HFTY, GXCK] );
+      GELL.attr("x1", function(KWOL){return KWOL.QLUN;})
+          .attr("x2", function(KWOL){return KWOL.LNXA;})
+          .attr("y1", function(KWOL){return KWOL.KNJL;})
+          .attr("y2", function(KWOL){return KWOL.PKEJ;})
+          .attr("stroke", function(KWOL){return KWOL.LEPW;})
+          .attr("stroke-width", function(KWOL){return KWOL.QBHL;});
+      GELL.enter().append("line")
+          .attr("x1", function(KWOL){return KWOL.QLUN;})
+          .attr("x2", function(KWOL){return KWOL.LNXA;})
+          .attr("y1", function(KWOL){return KWOL.KNJL;})
+          .attr("y2", function(KWOL){return KWOL.PKEJ;})
+          .attr("stroke", function(KWOL){return KWOL.LEPW;})
+          .attr("stroke-width", function(KWOL){return KWOL.QBHL;});
+      GELL.exit().remove();
     }
 
     { // draw the squares
-      function MUCF( QXYM, PUGQ, PIQC, THDV, SNVR, FHKM) {
-        let BSUK = this;
-        BSUK.QXYM = QXYM;
-        BSUK.PUGQ = PUGQ;
-        BSUK.PIQC = PIQC;
-        BSUK.THDV = THDV;
-        BSUK.SNVR = SNVR;
-        BSUK.FHKM = FHKM;
-        return BSUK;
+      function GADD( GTKK, YDHH, PSQJ, PXZE, XYRD, QIML) {
+        let DSWG = this;
+        DSWG.GTKK = GTKK;
+        DSWG.YDHH = YDHH;
+        DSWG.PSQJ = PSQJ;
+        DSWG.PXZE = PXZE;
+        DSWG.XYRD = XYRD;
+        DSWG.QIML = QIML;
+        return DSWG;
       }
 
-      let EBMD = BSUK.YTOG + "vmin";
+      let ZISY = DSWG.NDTY + "vmin";
 
-      function ECHF(UKEE, RNCI, LKQY, CDKL) {
-        let FERA = 2 * Math.PI / UKEE.length;
-        let NIGM = []
-        for (let XKKJ=0; XKKJ<UKEE.length; XKKJ++)
+      function SUHW(KVWY, IHVD, LDYR, UAYW) {
+        let EIKE = 2 * Math.PI / KVWY.length;
+        let XKNS = []
+        for (let HSYT=0; HSYT<KVWY.length; HSYT++)
         {
-          let PUGQ = (Math.cos(FERA * XKKJ + Math.PI / 2) * RNCI + LKQY)*0.9;
-          let PIQC = (Math.sin(FERA * XKKJ + Math.PI / 2) * RNCI + CDKL)*0.9;
-          NIGM.push(new MUCF(UKEE[XKKJ].DYHI, PUGQ, PIQC, UKEE[XKKJ].THDV, EBMD, EBMD));
+          let YDHH = (Math.cos(EIKE * HSYT + Math.PI / 2) * IHVD + LDYR)*0.9;
+          let PSQJ = (Math.sin(EIKE * HSYT + Math.PI / 2) * IHVD + UAYW)*0.9;
+          XKNS.push(new GADD(KVWY[HSYT].ZFKR, YDHH, PSQJ, KVWY[HSYT].PXZE, ZISY, ZISY));
         }
-        return NIGM;
+        return XKNS;
       }
 
-      let CVSM = BSUK.XMJT;
-      let CYMA = ECHF(BSUK.CYMA[0],CVSM*1.00,50,50).concat(
-                 ECHF(BSUK.CYMA[1],CVSM*0.75,50,50).concat(
-                 ECHF(BSUK.CYMA[2],CVSM*0.50,50,50)));
+      let HACG = DSWG.QFEU;
+      let SEAA = SUHW(DSWG.SEAA[0],HACG*1.00,50,50).concat(
+                 SUHW(DSWG.SEAA[1],HACG*0.75,50,50).concat(
+                 SUHW(DSWG.SEAA[2],HACG*0.50,50,50)));
 
-      let GXAP = BYMI.selectAll("rect").data( CYMA );
-      GXAP.enter().append("rect")
-        .attr("width", function(TWKW){return TWKW.SNVR})
-        .attr("height", function(TWKW){return TWKW.FHKM})
-        .attr("x", function(TWKW){return TWKW.PUGQ + "vmin"})
-        .attr("y", function(TWKW){return TWKW.PIQC + "vmin"})
-        .attr("fill", function(TWKW){return TWKW.QXYM});
-      GXAP.exit().remove();
+      let KHXK = DSOW.selectAll("rect").data( SEAA );
+      KHXK.enter().append("rect")
+        .attr("width", function(KWOL){return KWOL.XYRD})
+        .attr("height", function(KWOL){return KWOL.QIML})
+        .attr("x", function(KWOL){return KWOL.YDHH + "vmin"})
+        .attr("y", function(KWOL){return KWOL.PSQJ + "vmin"})
+        .attr("fill", function(KWOL){return KWOL.GTKK});
+      KHXK.exit().remove();
 
-      let RPDE = 0.65;
+      let EGZT = 0.65;
 
-      let THDV = BYMI.selectAll("text").data( CYMA );
-      THDV.attr("x", function(TWKW){return TWKW.PUGQ +BSUK.YTOG/3.25+ "vmin"})
-        .attr("y", function(TWKW){return TWKW.PIQC +BSUK.YTOG/1.35+ "vmin"})
+      let PXZE = DSOW.selectAll("text").data( SEAA );
+      PXZE.attr("x", function(KWOL){return KWOL.YDHH +DSWG.NDTY/3.25+ "vmin"})
+        .attr("y", function(KWOL){return KWOL.PSQJ +DSWG.NDTY/1.35+ "vmin"})
         .attr("fill","red")
         .attr("class","pretty_text")
-        .attr("font-size", BSUK.YTOG*RPDE+"vmin")
-        .text(function(TWKW){return TWKW.THDV});
-      THDV.enter().append("text")
-        .attr("x", function(TWKW){return TWKW.PUGQ +BSUK.YTOG/3.25+ "vmin"})
-        .attr("y", function(TWKW){return TWKW.PIQC +BSUK.YTOG/1.35+ "vmin"})
+        .attr("font-size", DSWG.NDTY*EGZT+"vmin")
+        .text(function(KWOL){return KWOL.PXZE});
+      PXZE.enter().append("text")
+        .attr("x", function(KWOL){return KWOL.YDHH +DSWG.NDTY/3.25+ "vmin"})
+        .attr("y", function(KWOL){return KWOL.PSQJ +DSWG.NDTY/1.35+ "vmin"})
         .attr("fill","red")
         .attr("class","pretty_text")
-        .attr("font-size", BSUK.YTOG*RPDE+"vmin")
-        .text(function(TWKW){return TWKW.THDV});
-      THDV.exit().remove();
+        .attr("font-size", DSWG.NDTY*EGZT+"vmin")
+        .text(function(KWOL){return KWOL.PXZE});
+      PXZE.exit().remove();
     }
   }
-  window.addEventListener("resize", BSUK.XSZZ);
+  window.addEventListener("resize", DSWG.BBWZ);
 }
 
 
 
-function RWXW(AQXC)  // This is a CLASS definition
+function XVTJ(ZROC)  // This is a CLASS definition
 {
-  let BSUK = this;
-  let SPLM = false;
-  BSUK.ACAP = AQXC;
+  let DSWG = this;
+  let DQTB = false;
+  DSWG.CDHK = ZROC;
 
-  BSUK.SXIH = function() {SPLM = true;}
-  BSUK.TIXE = function() {SPLM = false;}
+  DSWG.HBJE = function() {DQTB = true;}
+  DSWG.QLZI = function() {DQTB = false;}
 
-  BSUK.RSGF = function(RHYF) {
-    if (SPLM == true){
-      BSUK.ACAP(RHYF.key);
+  DSWG.DCWS = function(IBTA) {
+    if (DQTB == true){
+      DSWG.CDHK(IBTA.key);
     }
   }
 
-  BSUK.ILQR = function() {
-    window.removeEventListener("keypress", BSUK.RSGF);
+  DSWG.TLXP = function() {
+    window.removeEventListener("keypress", DSWG.DCWS);
   }
 
-  window.addEventListener('keypress', BSUK.RSGF);
+  window.addEventListener('keypress', DSWG.DCWS);
 }
 
 
