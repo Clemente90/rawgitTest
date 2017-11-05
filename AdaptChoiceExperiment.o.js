@@ -1,63 +1,63 @@
 'use strict'
 
-let CGZO = function (WNIQ) {console.log(WNIQ);}
+let FVOZ = function (XZHN) {console.log(XZHN);}
 
-function IKVC(JTHC){
-  let OVFZ = 0.0;
-  JTHC.forEach(function(WNIQ) {
-    OVFZ += WNIQ;
+function ROUU(XPES){
+  let BMZF = 0.0;
+  XPES.forEach(function(XZHN) {
+    BMZF += XZHN;
   });
-  OVFZ /= JTHC.OAVS;
-  return OVFZ;
+  BMZF /= XPES.NVPB;
+  return BMZF;
 }
 
-function DONR(JTHC){
-  let CPNG = mean(JTHC);
-  let OVFZ = 0.0;
-  JTHC.forEach(function(WNIQ){
-    OVFZ += Math.abs(WNIQ - CPNG);
+function OVGL(XPES){
+  let SDQT = mean(XPES);
+  let BMZF = 0.0;
+  XPES.forEach(function(XZHN){
+    BMZF += Math.abs(XZHN - SDQT);
   });
-  OVFZ /= JTHC.length;
-  return OVFZ;
+  BMZF /= XPES.length;
+  return BMZF;
 }
 
-function FZIM(JTHC){
-  let OVFZ = stdev(JTHC) / Math.sqrt(JTHC.length);
-  return OVFZ;
+function OGCE(XPES){
+  let BMZF = stdev(XPES) / Math.sqrt(XPES.length);
+  return BMZF;
 }
 
-function OLKV(DMBM, HLZQ, IFYA=false){
-  if (IFYA == false){
-    return Math.floor(Math.random() * (HLZQ-DMBM)) + DMBM;
+function KGHK(KWQG, HMUO, VYIZ=false){
+  if (VYIZ == false){
+    return Math.floor(Math.random() * (HMUO-KWQG)) + KWQG;
   } else {
-    return Math.floor(Math.random() * (HLZQ-DMBM+1)) + DMBM;
+    return Math.floor(Math.random() * (HMUO-KWQG+1)) + KWQG;
   }
 }
 
-function CSRE(DMBM, HLZQ, IFYA=false){
-  if (IFYA == false){
-    return Math.random() * (HLZQ-DMBM) + DMBM;
+function VFKT(KWQG, HMUO, VYIZ=false){
+  if (VYIZ == false){
+    return Math.random() * (HMUO-KWQG) + KWQG;
   } else {
-    return Math.random() * (HLZQ-DMBM+1) + DMBM;
+    return Math.random() * (HMUO-KWQG+1) + KWQG;
   }
 }
 
-function IAWA(GTJH){
-  let FLHD = undefined;
-  let RNDV = undefined;
-  for (let DCXJ = GTJH.length-1; DCXJ >=0; DCXJ--){
-    FLHD = OLKV(0,DCXJ,true);
-    RNDV = GTJH[FLHD];
-    GTJH[FLHD] = GTJH[DCXJ];
-    GTJH[DCXJ] = RNDV;
+function USGP(WJPM){
+  let VILP = undefined;
+  let IRFV = undefined;
+  for (let ILPA = WJPM.length-1; ILPA >=0; ILPA--){
+    VILP = KGHK(0,ILPA,true);
+    IRFV = WJPM[VILP];
+    WJPM[VILP] = WJPM[ILPA];
+    WJPM[ILPA] = IRFV;
   }
-  return GTJH;
+  return WJPM;
 }
 
-function DJSB(LXVC){
+function EBRT(VOXP){
   try{
-    LXVC.CHOA();
-  }catch(CMFH){
+    VOXP.MDSM();
+  }catch(TSWQ){
   }finally{
     return undefined;
   }
@@ -65,34 +65,34 @@ function DJSB(LXVC){
 
 
 
-function CNIX (){  // This is a CLASS definition.
-  let JYGK = this;
+function VIDH (){  // This is a CLASS definition.
+  let SNQV = this;
 
-  JYGK.PSCX = (!!window.opr && !!opr.addons) ||
+  SNQV.WJIK = (!!window.opr && !!opr.addons) ||
                   !!window.opera ||
                   0 <= navigator.userAgent.indexOf(' OPR/');
-  JYGK.LGJC = 'undefined' !== typeof InstallTrigger;
-  JYGK.IQXO = /constructor/i.test(window.HTMLElement) ||
+  SNQV.WNFI = 'undefined' !== typeof InstallTrigger;
+  SNQV.KUSN = /constructor/i.test(window.HTMLElement) ||
                   '[object SafariRemoteNotification]' === (!window.safari ||
                   ('undefined' !== typeof safari && safari.pushNotification)).toString();
-  JYGK.IPXF = !!document.documentMode;
-  JYGK.ALAX = !JYGK.IPXF && !!window.StyleMedia;
-  JYGK.OXMV = !!window.chrome && !!window.chrome.webstore;
-  JYGK.UHKC = ((JYGK.OXMV = !!window.chrome &&
+  SNQV.ASTE = !!document.documentMode;
+  SNQV.ZXJW = !SNQV.ASTE && !!window.StyleMedia;
+  SNQV.TCAG = !!window.chrome && !!window.chrome.webstore;
+  SNQV.IPIW = ((SNQV.TCAG = !!window.chrome &&
                    !!window.chrome.webstore) ||
-                   JYGK.PSCX) && !!window.CSS;
-  JYGK.QAGN = JYGK.PSCX ? "Opera" :
-                    (JYGK.LGJC ? "Firefox" :
-                    (JYGK.IQXO ? "Safari" :
-                    (JYGK.IPXF ? "IE" :
-                    (JYGK.ALAX ? "Edge" :
-                    (JYGK.OXMV ? "Chrome" :
+                   SNQV.WJIK) && !!window.CSS;
+  SNQV.OPXI = SNQV.WJIK ? "Opera" :
+                    (SNQV.WNFI ? "Firefox" :
+                    (SNQV.KUSN ? "Safari" :
+                    (SNQV.ASTE ? "IE" :
+                    (SNQV.ZXJW ? "Edge" :
+                    (SNQV.TCAG ? "Chrome" :
                     "Unknown Browser")))))
-  JYGK.NYBH = window.devicePixelRatio;
-  JYGK.CVBI = $(window).height();
-  JYGK.CCZR = $(window).width();
-  JYGK.HSVA = Math.round(JYGK.NYBH * JYGK.CVBI);
-  JYGK.WBAJ = Math.round(JYGK.NYBH * JYGK.CCZR);
+  SNQV.QFTE = window.devicePixelRatio;
+  SNQV.CSUE = $(window).height();
+  SNQV.MPWI = $(window).width();
+  SNQV.TZBJ = Math.round(SNQV.QFTE * SNQV.CSUE);
+  SNQV.TCJC = Math.round(SNQV.QFTE * SNQV.MPWI);
 }
 
 
@@ -101,455 +101,455 @@ function CNIX (){  // This is a CLASS definition.
 
 function UserData()  // This is a CLASS definition
 {
-  let JYGK = this;
-  JYGK.data = [];
-  JYGK.push = function(datum) { JYGK.data.push(datum); }
+  let SNQV = this;
+  SNQV.data = [];
+  SNQV.push = function(datum) { SNQV.data.push(datum); }
 }
 function UserDatum(type, value, timestamp=performance.now())  // This is a CLASS definition
 {
-  let JYGK = this;
-  JYGK.type = type;
-  JYGK.value = value;
-  JYGK.timestamp = timestamp;
+  let SNQV = this;
+  SNQV.type = type;
+  SNQV.value = value;
+  SNQV.timestamp = timestamp;
 }
 
 
-function Experiment(GWET)  // This is a CLASS definition
+function Experiment(MDAP)  // This is a CLASS definition
 {
-  let JYGK = this;
+  let SNQV = this;
   { // Initialize the CLASS's properties ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    JYGK.XYQU = new Object;
-      JYGK.XYQU.SADE = "Adaptive Choice Visual Search Task";
+    SNQV.CNBP = new Object;
+      SNQV.CNBP.XRDN = "Adaptive Choice Visual Search Task";
 
-      JYGK.XYQU.YJNV = 90;  // percent relative to browser minimum dimension.
-      JYGK.XYQU.KYCG = 45;  // percent relative to browser minimum dimension.
-      JYGK.XYQU.HKBN = 4;  // percent relative to the browser minimum dimension.
+      SNQV.CNBP.IGAM = 90;  // percent relative to browser minimum dimension.
+      SNQV.CNBP.VRFE = 45;  // percent relative to browser minimum dimension.
+      SNQV.CNBP.KDSO = 4;  // percent relative to the browser minimum dimension.
 
-      JYGK.XYQU.CHYM = "rgb(255,255,255)";
+      SNQV.CNBP.KOCX = "rgb(255,255,255)";
 
-      JYGK.XYQU.TAYB = "rgb( 255,   0,   0 )";
-      JYGK.XYQU.UJCJ = "rgb(   0,   0, 255 )";
-      JYGK.XYQU.ZXGF = "rgb(   0, 255,   0 )";
-      //JYGK.XYQU.TAYB = "rgb(  27, 158, 119 )"; // colorblind friendly colors
-      //JYGK.XYQU.UJCJ = "rgb( 217,  95,   2 )";
-      //JYGK.XYQU.ZXGF = "rgb( 117, 112, 179 )";
+      SNQV.CNBP.TLPJ = "rgb( 255,   0,   0 )";
+      SNQV.CNBP.CFAX = "rgb(   0,   0, 255 )";
+      SNQV.CNBP.SOST = "rgb(   0, 255,   0 )";
+      //SNQV.CNBP.TLPJ = "rgb(  27, 158, 119 )"; // colorblind friendly colors
+      //SNQV.CNBP.CFAX = "rgb( 217,  95,   2 )";
+      //SNQV.CNBP.SOST = "rgb( 117, 112, 179 )";
 
-      JYGK.XYQU.LEZW = [12, 18, 24];
-      JYGK.XYQU.BSOR    = 12;  // for each color_1 and color_2
-      JYGK.XYQU.TYHC = 14;  // for color_1 or color_2
-      JYGK.XYQU.SXTO      = 14;  // for color_3
+      SNQV.CNBP.LXIC = [12, 18, 24];
+      SNQV.CNBP.NHOG    = 12;  // for each color_1 and color_2
+      SNQV.CNBP.DXOM = 14;  // for color_1 or color_2
+      SNQV.CNBP.BTVB      = 14;  // for color_3
 
-      JYGK.XYQU.RNTA     = [ 2, 3, 4, 5 ];
-      JYGK.XYQU.ATLO = [ 6, 7, 8, 9 ];
-      JYGK.XYQU.KLPH       = new Map([[ "v", JYGK.XYQU.RNTA[0]],
-                                                  [ "b", JYGK.XYQU.RNTA[1]],
-                                                  [ "n", JYGK.XYQU.RNTA[2]],
-                                                  [ "m", JYGK.XYQU.RNTA[3]]])
+      SNQV.CNBP.ZWTR     = [ 2, 3, 4, 5 ];
+      SNQV.CNBP.DCGC = [ 6, 7, 8, 9 ];
+      SNQV.CNBP.EHBB       = new Map([[ "v", SNQV.CNBP.ZWTR[0]],
+                                                  [ "b", SNQV.CNBP.ZWTR[1]],
+                                                  [ "n", SNQV.CNBP.ZWTR[2]],
+                                                  [ "m", SNQV.CNBP.ZWTR[3]]])
 
-    JYGK.GWET = GWET;
-    JYGK.OZBH = -1;
-    JYGK.QNCJ = new UserData();
-    JYGK.QNCJ.push( new UserDatum("event", "experiment_initialized") );
+    SNQV.MDAP = MDAP;
+    SNQV.YDQR = -1;
+    SNQV.KLQP = new UserData();
+    SNQV.KLQP.push( new UserDatum("event", "experiment_initialized") );
   } // end properties
 
   { // Define the CLASS's methods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    JYGK.run = function (){
-      let BUVJ = [[JYGK.PGJL, null],
-                    [JYGK.BYGE, null],
-                    [JYGK.OQXQ, null],
-                    [JYGK.HUEP, [3]],
-                    [JYGK.SDFP, [0, 5]],
-                    [JYGK.SDFP, [1, 5]],
-                    [JYGK.SDFP, [2, 5]],
-                    [JYGK.GZKH, null]];
-      if (JYGK.OZBH < (BUVJ.length-1)){
-        JYGK.OZBH++;
-        let DCXJ = JYGK.OZBH;
-        BUVJ[DCXJ][0].apply(null,BUVJ[DCXJ][1]);
+    SNQV.run = function (){
+      let NSJE = [[SNQV.TISI, null],
+                    [SNQV.GWUK, null],
+                    [SNQV.JXNM, null],
+                    [SNQV.EVFJ, [3]],
+                    [SNQV.YSBO, [0, 5]],
+                    [SNQV.YSBO, [1, 5]],
+                    [SNQV.YSBO, [2, 5]],
+                    [SNQV.XTED, null]];
+      if (SNQV.YDQR < (NSJE.length-1)){
+        SNQV.YDQR++;
+        let ILPA = SNQV.YDQR;
+        NSJE[ILPA][0].apply(null,NSJE[ILPA][1]);
       }
     }
 
 
-    JYGK.VVAU = function(){
+    SNQV.DQEF = function(){
       d3.selectAll("#workspace").data([]).exit().remove();
-      GWET.selectAll("div").data([1])
+      MDAP.selectAll("div").data([1])
         .enter().append("div")
           .attr("id", "workspace");
       return d3.select("#workspace");
     }
 
-    JYGK.LMIK = function(){
+    SNQV.HGJY = function(){
       d3.selectAll(".headeR").data([]).exit().remove();
     }
 
 
-    JYGK.PGJL = function(){
-      let GWIA = JYGK.VVAU();
-      let SYNJ = [ "<hr>",
+    SNQV.TISI = function(){
+      let IXDP = SNQV.DQEF();
+      let BYDU = [ "<hr>",
                    "Running Self Tests ... Completed",
                    "<hr>",
                    "Continue?"
                  ]
-      GWIA.selectAll("p").data(SYNJ)
+      IXDP.selectAll("p").data(BYDU)
         .enter().append("p")
           .html(function(d){return d;});
 
-      let ONTM = GWIA.selectAll("button").data(["Yes"]).enter().append("button");
-      ONTM.text(function(d){return d;});
-      ONTM.attr("id", function(d){return d;});
-      ONTM.on("click", function(){JYGK.run();})
+      let OLID = IXDP.selectAll("button").data(["Yes"]).enter().append("button");
+      OLID.text(function(d){return d;});
+      OLID.attr("id", function(d){return d;});
+      OLID.on("click", function(){SNQV.run();})
     }
 
 
-    JYGK.BYGE = function(){
-      let GWIA = JYGK.VVAU();
+    SNQV.GWUK = function(){
+      let IXDP = SNQV.DQEF();
 
-      let EKUD = new CNIX();
-      let SYNJ = [ "<hr>",
-                   "Browser Name: " + EKUD.QAGN,
-                   "Browser's Screen Width: " + EKUD.WBAJ,
-                   "Browser's Screen Height: " + EKUD.HSVA,
+      let COGT = new VIDH();
+      let BYDU = [ "<hr>",
+                   "Browser Name: " + COGT.OPXI,
+                   "Browser's Screen Width: " + COGT.TCJC,
+                   "Browser's Screen Height: " + COGT.TZBJ,
                    "<hr>",
                    "Will you allow us to collect the above information?"
                  ]
 
-      GWIA.selectAll("p").data(SYNJ)
+      IXDP.selectAll("p").data(BYDU)
         .enter().append("p")
-          .html(function(OBXZ){return OBXZ;});
+          .html(function(JIGV){return JIGV;});
 
-      let ONTM = GWIA.selectAll("button").data(["Yes"]).enter().append("button");
-      ONTM.text(function(OBXZ){return OBXZ;});
-      ONTM.attr("id", function(OBXZ){return OBXZ;});
-      ONTM.on("click", function(){JYGK.run();})
+      let OLID = IXDP.selectAll("button").data(["Yes"]).enter().append("button");
+      OLID.text(function(JIGV){return JIGV;});
+      OLID.attr("id", function(JIGV){return JIGV;});
+      OLID.on("click", function(){SNQV.run();})
     }
 
 
-    JYGK.OQXQ = function(){
-      let GWIA = JYGK.VVAU();
-      let SYNJ = [ "<hr>",
+    SNQV.JXNM = function(){
+      let IXDP = SNQV.DQEF();
+      let BYDU = [ "<hr>",
                    "Instructions!",
                    "<hr>",
                    "Click to start tutorial:"
                  ]
-      GWIA.selectAll("p").data(SYNJ)
+      IXDP.selectAll("p").data(BYDU)
         .enter().append("p")
-          .html(function(OBXZ){return OBXZ});
+          .html(function(JIGV){return JIGV});
 
-      let ONTM = GWIA.selectAll("button").data(["Yes"]).enter().append("button");
-      ONTM.text(function(OBXZ){return OBXZ;});
-      ONTM.attr("id", function(OBXZ){return OBXZ;});
-      ONTM.on("click", function(){JYGK.run();})
+      let OLID = IXDP.selectAll("button").data(["Yes"]).enter().append("button");
+      OLID.text(function(JIGV){return JIGV;});
+      OLID.attr("id", function(JIGV){return JIGV;});
+      OLID.on("click", function(){SNQV.run();})
     }
 
 
-    JYGK.HUEP = function(BQPR=1){
-      let GWIA = JYGK.VVAU();
-      JYGK.SDFP(-1, BQPR);  //TODO(KAL)
+    SNQV.EVFJ = function(UTYL=1){
+      let IXDP = SNQV.DQEF();
+      SNQV.YSBO(-1, UTYL);  //TODO(KAL)
     }
 
 
-    JYGK.SDFP = function(KKSJ, BQPR=1){
-      function PNTI(IEWH, YNGC, NQLH=false){
-        let JYGK = this;
-        if (NQLH == true){
-          JYGK.IEWH = OLKV(0, 9, true);
-          let WIIO = OLKV(0, 2, true);
-          if (WIIO == 0) { JYGK.YNGC = JYGK.XYQU.TAYB; }
-          else if (WIIO == 1) { JYGK.YNGC = JYGK.XYQU.UJCJ; }
-          else { JYGK.YNGC = JYGK.XYQU.ZXGF; }
+    SNQV.YSBO = function(JFRS, UTYL=1){
+      function BKQT(PKYF, NOAT, CEVI=false){
+        let SNQV = this;
+        if (CEVI == true){
+          SNQV.PKYF = KGHK(0, 9, true);
+          let AWOX = KGHK(0, 2, true);
+          if (AWOX == 0) { SNQV.NOAT = SNQV.CNBP.TLPJ; }
+          else if (AWOX == 1) { SNQV.NOAT = SNQV.CNBP.CFAX; }
+          else { SNQV.NOAT = SNQV.CNBP.SOST; }
         } else {
-          JYGK.IEWH = IEWH;
-          JYGK.YNGC = YNGC;
+          SNQV.PKYF = PKYF;
+          SNQV.NOAT = NOAT;
         }
-        return JYGK;
+        return SNQV;
       }
 
 
-      let EPOJ = undefined;
-      let TJIA = undefined;
-      function HPUC(){
-        function OYDA(GTJH, HUVX=null){
-          let GZRH = OLKV(0, GTJH.length);
-          let EVIC = GTJH[GZRH];
-          if (EVIC === HUVX){
-            return OYDA(GTJH, HUVX);
+      let YNOH = undefined;
+      let MNSW = undefined;
+      function CUUF(){
+        function WXTT(WJPM, HFEM=null){
+          let OTBX = KGHK(0, WJPM.length);
+          let GFOH = WJPM[OTBX];
+          if (GFOH === HFEM){
+            return WXTT(WJPM, HFEM);
           }
-          return EVIC;
+          return GFOH;
         }
 
-        let UWRN = [];
+        let MLCL = [];
 
         { // Push Back Targets:
-          EPOJ = OYDA(JYGK.XYQU.RNTA);
-          TJIA = OYDA(JYGK.XYQU.RNTA, EPOJ);
-          UWRN.push( new PNTI(EPOJ, JYGK.XYQU.TAYB) );
-          UWRN.push( new PNTI(TJIA, JYGK.XYQU.UJCJ) );
+          YNOH = WXTT(SNQV.CNBP.ZWTR);
+          MNSW = WXTT(SNQV.CNBP.ZWTR, YNOH);
+          MLCL.push( new BKQT(YNOH, SNQV.CNBP.TLPJ) );
+          MLCL.push( new BKQT(MNSW, SNQV.CNBP.CFAX) );
         }
         { // Push Color_1, Color_2, and Color_3 fixed distractors
-          let RMBM = undefined;
-          let YWBL = JYGK.XYQU.BSOR;
-          for (let DCXJ = 0; DCXJ < YWBL; DCXJ++){
-            RMBM = OYDA(JYGK.XYQU.ATLO);
-            UWRN.push( new PNTI(RMBM, JYGK.XYQU.TAYB) );
+          let AOIM = undefined;
+          let MDLO = SNQV.CNBP.NHOG;
+          for (let ILPA = 0; ILPA < MDLO; ILPA++){
+            AOIM = WXTT(SNQV.CNBP.DCGC);
+            MLCL.push( new BKQT(AOIM, SNQV.CNBP.TLPJ) );
           }
-          YWBL = JYGK.XYQU.BSOR;
-          for (let DCXJ = 0; DCXJ < YWBL; DCXJ++){
-            RMBM = OYDA(JYGK.XYQU.ATLO);
-            UWRN.push( new PNTI(RMBM, JYGK.XYQU.UJCJ) );
+          MDLO = SNQV.CNBP.NHOG;
+          for (let ILPA = 0; ILPA < MDLO; ILPA++){
+            AOIM = WXTT(SNQV.CNBP.DCGC);
+            MLCL.push( new BKQT(AOIM, SNQV.CNBP.CFAX) );
           }
-          YWBL = JYGK.XYQU.SXTO;
-          for (let DCXJ = 0; DCXJ < YWBL; DCXJ++){
-            RMBM = OYDA(JYGK.XYQU.ATLO);
-            UWRN.push( new PNTI(RMBM, JYGK.XYQU.ZXGF) );
+          MDLO = SNQV.CNBP.BTVB;
+          for (let ILPA = 0; ILPA < MDLO; ILPA++){
+            AOIM = WXTT(SNQV.CNBP.DCGC);
+            MLCL.push( new BKQT(AOIM, SNQV.CNBP.SOST) );
           }
         }
         { // Push Color_1 and Color_2 variable distractors
-          let RMBM = undefined;
-          let ASTU = undefined;
-          let DVEH = [ JYGK.XYQU.TAYB, JYGK.XYQU.UJCJ ]
-          let YWBL = JYGK.XYQU.TYHC;
-          for (let DCXJ = 0; DCXJ < YWBL; DCXJ++){
-            RMBM = OYDA(JYGK.XYQU.ATLO);
-            ASTU = OYDA(DVEH);
-            UWRN.push( new PNTI(RMBM, ASTU) );
+          let AOIM = undefined;
+          let PHGI = undefined;
+          let YVOS = [ SNQV.CNBP.TLPJ, SNQV.CNBP.CFAX ]
+          let MDLO = SNQV.CNBP.DXOM;
+          for (let ILPA = 0; ILPA < MDLO; ILPA++){
+            AOIM = WXTT(SNQV.CNBP.DCGC);
+            PHGI = WXTT(YVOS);
+            MLCL.push( new BKQT(AOIM, PHGI) );
           }
         }
-        let OVFZ = undefined;
+        let BMZF = undefined;
         { // randomize order and split into sub-arrays
-          let JPPI = IAWA(UWRN);
-          let GTJH = JYGK.XYQU.LEZW[0];
-          let FXIF = JYGK.XYQU.LEZW[1];
-          let OBVT = JYGK.XYQU.LEZW[2];
-          OVFZ = [JPPI.slice(GTJH+FXIF, GTJH+FXIF+OBVT),
-                    JPPI.slice(GTJH, GTJH+FXIF),
-                    JPPI.slice(0, GTJH)];
+          let QRLB = USGP(MLCL);
+          let WJPM = SNQV.CNBP.LXIC[0];
+          let TGDB = SNQV.CNBP.LXIC[1];
+          let HZED = SNQV.CNBP.LXIC[2];
+          BMZF = [QRLB.slice(WJPM+TGDB, WJPM+TGDB+HZED),
+                    QRLB.slice(WJPM, WJPM+TGDB),
+                    QRLB.slice(0, WJPM)];
         }
 
-        return OVFZ;
+        return BMZF;
       }
 
-      function RGNL(ANHP){
-        JYGK.QNCJ.push( new UserDatum("event.key_press.trial-"+DOFL, ANHP) );
-        if (JYGK.XYQU.KLPH.has(ANHP))
+      function ZYAU(KFSJ){
+        SNQV.KLQP.push( new UserDatum("event.key_press.trial-"+EFEQ, KFSJ) );
+        if (SNQV.CNBP.EHBB.has(KFSJ))
         {
-          WMKO.EIPT();
-          FNTC.WMJG();
-          let NVYK = "data.in.user_answer.block-" + KKSJ + ".trial-" + DOFL;
-          if (JYGK.XYQU.KLPH.get(ANHP) == EPOJ)
+          TCJF.GQVT();
+          RCZT.CCJN();
+          let HTEZ = "data.in.user_answer.block-" + JFRS + ".trial-" + EFEQ;
+          if (SNQV.CNBP.EHBB.get(KFSJ) == YNOH)
           {
-            JYGK.QNCJ.push( new UserDatum(NVYK, "correct_1") );
-            CAED++;
-          } else if (JYGK.XYQU.KLPH.get(ANHP) == TJIA) {
-            JYGK.QNCJ.push( new UserDatum(NVYK, "correct_2") );
-            CAED++;
+            SNQV.KLQP.push( new UserDatum(HTEZ, "correct_1") );
+            CZUS++;
+          } else if (SNQV.CNBP.EHBB.get(KFSJ) == MNSW) {
+            SNQV.KLQP.push( new UserDatum(HTEZ, "correct_2") );
+            CZUS++;
           } else {
-            JYGK.QNCJ.push( new UserDatum(NVYK, "incorrect") );
+            SNQV.KLQP.push( new UserDatum(HTEZ, "incorrect") );
           }
-          JYGK.QNCJ.push( new UserDatum("event.block-"+KKSJ+".trial-"+DOFL, "chart_cleared") );
-          setTimeout(OCKP, 500);
+          SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".trial-"+EFEQ, "chart_cleared") );
+          setTimeout(GLZD, 500);
         }
       }
-      let DOFL = 0;
-      function OCKP() {
-        if (DOFL < BQPR){
-          DOFL++;
-          let SYNJ = HPUC();
-          JYGK.QNCJ.push( new UserDatum("data.chart_data.block-"+KKSJ+".trial-"+DOFL, SYNJ) );
-          FNTC.LOHI( SYNJ );
-          FNTC.PWOT();
-          WMKO.EBNP();
-          JYGK.QNCJ.push( new UserDatum("event.block-"+KKSJ+".trial-"+DOFL, "chart_shown") );
-          CGZO(JYGK.QNCJ);
+      let EFEQ = 0;
+      function GLZD() {
+        if (EFEQ < UTYL){
+          EFEQ++;
+          let BYDU = CUUF();
+          SNQV.KLQP.push( new UserDatum("data.chart_data.block-"+JFRS+".trial-"+EFEQ, BYDU) );
+          RCZT.JFKI( BYDU );
+          RCZT.OYQV();
+          TCJF.TUKO();
+          SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".trial-"+EFEQ, "chart_shown") );
+          FVOZ(SNQV.KLQP);
         } else {
-          FNTC = DJSB(FNTC);
-          WMKO = DJSB(WMKO);
+          RCZT = EBRT(RCZT);
+          TCJF = EBRT(TCJF);
           alert("You have finished this block!");
-          QFCH();
+          YUNV();
         }
       }
-      function QFCH() {
-        QDBT = CAED / BQPR;
-        JYGK.QNCJ.push( new UserDatum("event.block-"+KKSJ+".num_trials", BQPR) );
-        JYGK.QNCJ.push( new UserDatum("event.block-"+KKSJ+".num_correct", CAED) );
-        JYGK.QNCJ.push( new UserDatum("event.block-"+KKSJ+".accuracy", QDBT) );
-        alert("Your accuracy for this block was: " + QDBT*100 + "%");
-        JYGK.run();
+      function YUNV() {
+        PWCE = CZUS / UTYL;
+        SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".num_trials", UTYL) );
+        SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".num_correct", CZUS) );
+        SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".accuracy", PWCE) );
+        alert("Your accuracy for this block was: " + PWCE*100 + "%");
+        SNQV.run();
       }
 
       // Start:
-      let GWIA = JYGK.VVAU();
-      JYGK.LMIK();
-      let WMKO = new QDFJ(RGNL);
-      let FNTC = new QSFX(GWIA);
-      FNTC.KOOL( JYGK.XYQU.KYCG );
-      FNTC.WFZS( JYGK.XYQU.HKBN );
-      FNTC.OPNM( JYGK.XYQU.CHYM );
-      let CAED = 0;
-      let QDBT = 0.0;
-      OCKP();
+      let IXDP = SNQV.DQEF();
+      SNQV.HGJY();
+      let TCJF = new MWBV(ZYAU);
+      let RCZT = new GXZJ(IXDP);
+      RCZT.WZMH( SNQV.CNBP.VRFE );
+      RCZT.WRBB( SNQV.CNBP.KDSO );
+      RCZT.XIXD( SNQV.CNBP.KOCX );
+      let CZUS = 0;
+      let PWCE = 0.0;
+      GLZD();
     }
 
-    JYGK.GZKH = function() {
-      let GWIA = JYGK.VVAU();
-      let AONR = d3.selectAll("#submitButton");
-      AONR.style("display", "block");
+    SNQV.XTED = function() {
+      let IXDP = SNQV.DQEF();
+      let RLRJ = d3.selectAll("#submitButton");
+      RLRJ.style("display", "block");
 
-      let YCRM = d3.selectAll("user_result");
-      YCRM.attr("value", JSON.stringify(JYGK.QNCJ.SYNJ));
+      let IPVY = d3.selectAll("[name=user_result]");
+      IPVY.attr("value", JSON.stringify(SNQV.KLQP.BYDU));
     }
 
-    JYGK.YXXX = function(){}
-    JYGK.DTBG = function() {return JYGK.QNCJ;}
-    JYGK.TERB = function(VWMT){}
+    SNQV.UYRI = function(){}
+    SNQV.KFVF = function() {return SNQV.KLQP;}
+    SNQV.XLZO = function(XJRB){}
   }  // end methods
 }  // end Experiment
 
 
 
-function QSFX(GEPH)  // This is a CLASS definition.
+function GXZJ(VLCA)  // This is a CLASS definition.
 {
-  let JYGK = this;
+  let SNQV = this;
 
-  JYGK.GEPH = GEPH;
-  JYGK.ISOX = 0;
-  JYGK.HKBN = 0;
-  JYGK.CHYM = 0;
-  JYGK.SYNJ = 0;
+  SNQV.VLCA = VLCA;
+  SNQV.ZXEL = 0;
+  SNQV.KDSO = 0;
+  SNQV.KOCX = 0;
+  SNQV.BYDU = 0;
 
-  JYGK.CHOA = function() {
-    JYGK.GEPH.selectAll("svg").data([]).exit().remove();
-    window.removeEventListener("resize", JYGK.PWOT);
+  SNQV.MDSM = function() {
+    SNQV.VLCA.selectAll("svg").data([]).exit().remove();
+    window.removeEventListener("resize", SNQV.OYQV);
   }
-  JYGK.WMJG = function() {
-    JYGK.GEPH.selectAll("text").data([]).exit().remove();
-    JYGK.GEPH.selectAll("rect").data([]).exit().remove();
+  SNQV.CCJN = function() {
+    SNQV.VLCA.selectAll("text").data([]).exit().remove();
+    SNQV.VLCA.selectAll("rect").data([]).exit().remove();
   }
-  JYGK.KOOL = function(IXBF){ JYGK.ISOX = IXBF; }
-  JYGK.WFZS = function(DNCU){ JYGK.HKBN = DNCU; }
-  JYGK.OPNM = function(YNGC){ JYGK.CHYM = YNGC; }
-  JYGK.LOHI = function(SYNJ){ JYGK.SYNJ = SYNJ; }
-  JYGK.PWOT = function(){
-    let VQAD;
+  SNQV.WZMH = function(DIAD){ SNQV.ZXEL = DIAD; }
+  SNQV.WRBB = function(NDRM){ SNQV.KDSO = NDRM; }
+  SNQV.XIXD = function(NOAT){ SNQV.KOCX = NOAT; }
+  SNQV.JFKI = function(BYDU){ SNQV.BYDU = BYDU; }
+  SNQV.OYQV = function(){
+    let TLET;
     { // create svg element
-      VQAD = JYGK.GEPH.selectAll("svg").data([1]);
-      VQAD.enter().append("svg")
+      TLET = SNQV.VLCA.selectAll("svg").data([1]);
+      TLET.enter().append("svg")
         .attr("height", "95vh")
         .attr("width", "95vmin");
-      VQAD.exit().remove();
-      VQAD = JYGK.GEPH.selectAll("svg");
+      TLET.exit().remove();
+      TLET = SNQV.VLCA.selectAll("svg");
     }
 
     { // draw cross
-      let GTJH = JYGK.HKBN / 2;
-      let AEXH = {DGBX:49*.9+GTJH+"vmin", JGUQ:51*.9+GTJH+"vmin",
-                   WHTP:50*.9+GTJH+"vmin", CDUF:50*.9+GTJH+"vmin",
-                   DEFL:2, OBVT:JYGK.CHYM};
+      let WJPM = SNQV.KDSO / 2;
+      let KKVV = {HSJX:49*.9+WJPM+"vmin", KTYP:51*.9+WJPM+"vmin",
+                   EJAF:50*.9+WJPM+"vmin", HEHA:50*.9+WJPM+"vmin",
+                   LLXF:2, HZED:SNQV.KOCX};
 
-      let UCAF = {WHTP:49*.9+GTJH+"vmin", CDUF:51*.9+GTJH+"vmin",
-                   DGBX:50*.9+GTJH+"vmin", JGUQ:50*.9+GTJH+"vmin",
-                   DEFL:2, OBVT:JYGK.CHYM};
+      let BYEG = {EJAF:49*.9+WJPM+"vmin", HEHA:51*.9+WJPM+"vmin",
+                   HSJX:50*.9+WJPM+"vmin", KTYP:50*.9+WJPM+"vmin",
+                   LLXF:2, HZED:SNQV.KOCX};
 
-      let JTRA = VQAD.selectAll("line").data( [AEXH, UCAF] );
-      JTRA.attr("x1", function(OBXZ){return OBXZ.DGBX;})
-          .attr("x2", function(OBXZ){return OBXZ.JGUQ;})
-          .attr("y1", function(OBXZ){return OBXZ.WHTP;})
-          .attr("y2", function(OBXZ){return OBXZ.CDUF;})
-          .attr("stroke", function(OBXZ){return OBXZ.OBVT;})
-          .attr("stroke-width", function(OBXZ){return OBXZ.DEFL;});
-      JTRA.enter().append("line")
-          .attr("x1", function(OBXZ){return OBXZ.DGBX;})
-          .attr("x2", function(OBXZ){return OBXZ.JGUQ;})
-          .attr("y1", function(OBXZ){return OBXZ.WHTP;})
-          .attr("y2", function(OBXZ){return OBXZ.CDUF;})
-          .attr("stroke", function(OBXZ){return OBXZ.OBVT;})
-          .attr("stroke-width", function(OBXZ){return OBXZ.DEFL;});
-      JTRA.exit().remove();
+      let XHMD = TLET.selectAll("line").data( [KKVV, BYEG] );
+      XHMD.attr("x1", function(JIGV){return JIGV.HSJX;})
+          .attr("x2", function(JIGV){return JIGV.KTYP;})
+          .attr("y1", function(JIGV){return JIGV.EJAF;})
+          .attr("y2", function(JIGV){return JIGV.HEHA;})
+          .attr("stroke", function(JIGV){return JIGV.HZED;})
+          .attr("stroke-width", function(JIGV){return JIGV.LLXF;});
+      XHMD.enter().append("line")
+          .attr("x1", function(JIGV){return JIGV.HSJX;})
+          .attr("x2", function(JIGV){return JIGV.KTYP;})
+          .attr("y1", function(JIGV){return JIGV.EJAF;})
+          .attr("y2", function(JIGV){return JIGV.HEHA;})
+          .attr("stroke", function(JIGV){return JIGV.HZED;})
+          .attr("stroke-width", function(JIGV){return JIGV.LLXF;});
+      XHMD.exit().remove();
     }
 
     { // draw the squares
-      function VOIM( YOUC, YOQB, SPIT, IEWH, OFJJ, VTTU) {
-        let JYGK = this;
-        JYGK.YOUC = YOUC;
-        JYGK.YOQB = YOQB;
-        JYGK.SPIT = SPIT;
-        JYGK.IEWH = IEWH;
-        JYGK.OFJJ = OFJJ;
-        JYGK.VTTU = VTTU;
-        return JYGK;
+      function CYZB( EBEO, KJJO, QFKP, PKYF, XMVJ, ORRT) {
+        let SNQV = this;
+        SNQV.EBEO = EBEO;
+        SNQV.KJJO = KJJO;
+        SNQV.QFKP = QFKP;
+        SNQV.PKYF = PKYF;
+        SNQV.XMVJ = XMVJ;
+        SNQV.ORRT = ORRT;
+        return SNQV;
       }
 
-      let WMSD = JYGK.HKBN + "vmin";
+      let CPZY = SNQV.KDSO + "vmin";
 
-      function FSIK(EFNU, IXBF, TZRQ, GZYL) {
-        let TYMF = 2 * Math.PI / EFNU.length;
-        let OVFZ = []
-        for (let DCXJ=0; DCXJ<EFNU.length; DCXJ++)
+      function AIEZ(RMUE, DIAD, OEOR, OUQK) {
+        let WTDN = 2 * Math.PI / RMUE.length;
+        let BMZF = []
+        for (let ILPA=0; ILPA<RMUE.length; ILPA++)
         {
-          let YOQB = (Math.cos(TYMF * DCXJ + Math.PI / 2) * IXBF + TZRQ)*0.9;
-          let SPIT = (Math.sin(TYMF * DCXJ + Math.PI / 2) * IXBF + GZYL)*0.9;
-          OVFZ.push(new VOIM(EFNU[DCXJ].YNGC, YOQB, SPIT, EFNU[DCXJ].IEWH, WMSD, WMSD));
+          let KJJO = (Math.cos(WTDN * ILPA + Math.PI / 2) * DIAD + OEOR)*0.9;
+          let QFKP = (Math.sin(WTDN * ILPA + Math.PI / 2) * DIAD + OUQK)*0.9;
+          BMZF.push(new CYZB(RMUE[ILPA].NOAT, KJJO, QFKP, RMUE[ILPA].PKYF, CPZY, CPZY));
         }
-        return OVFZ;
+        return BMZF;
       }
 
-      let BQEE = JYGK.ISOX;
-      let SYNJ = FSIK(JYGK.SYNJ[0],BQEE*1.00,50,50).concat(
-                 FSIK(JYGK.SYNJ[1],BQEE*0.75,50,50).concat(
-                 FSIK(JYGK.SYNJ[2],BQEE*0.50,50,50)));
+      let VUJC = SNQV.ZXEL;
+      let BYDU = AIEZ(SNQV.BYDU[0],VUJC*1.00,50,50).concat(
+                 AIEZ(SNQV.BYDU[1],VUJC*0.75,50,50).concat(
+                 AIEZ(SNQV.BYDU[2],VUJC*0.50,50,50)));
 
-      let KHBA = VQAD.selectAll("rect").data( SYNJ );
-      KHBA.enter().append("rect")
-        .attr("width", function(OBXZ){return OBXZ.OFJJ})
-        .attr("height", function(OBXZ){return OBXZ.VTTU})
-        .attr("x", function(OBXZ){return OBXZ.YOQB + "vmin"})
-        .attr("y", function(OBXZ){return OBXZ.SPIT + "vmin"})
-        .attr("fill", function(OBXZ){return OBXZ.YOUC});
-      KHBA.exit().remove();
+      let KHSX = TLET.selectAll("rect").data( BYDU );
+      KHSX.enter().append("rect")
+        .attr("width", function(JIGV){return JIGV.XMVJ})
+        .attr("height", function(JIGV){return JIGV.ORRT})
+        .attr("x", function(JIGV){return JIGV.KJJO + "vmin"})
+        .attr("y", function(JIGV){return JIGV.QFKP + "vmin"})
+        .attr("fill", function(JIGV){return JIGV.EBEO});
+      KHSX.exit().remove();
 
-      let XSNO = 0.65;
+      let ZYBA = 0.65;
 
-      let IEWH = VQAD.selectAll("text").data( SYNJ );
-      IEWH.attr("x", function(OBXZ){return OBXZ.YOQB +JYGK.HKBN/3.25+ "vmin"})
-        .attr("y", function(OBXZ){return OBXZ.SPIT +JYGK.HKBN/1.35+ "vmin"})
+      let PKYF = TLET.selectAll("text").data( BYDU );
+      PKYF.attr("x", function(JIGV){return JIGV.KJJO +SNQV.KDSO/3.25+ "vmin"})
+        .attr("y", function(JIGV){return JIGV.QFKP +SNQV.KDSO/1.35+ "vmin"})
         .attr("fill","red")
         .attr("class","pretty_text")
-        .attr("font-size", JYGK.HKBN*XSNO+"vmin")
-        .text(function(OBXZ){return OBXZ.IEWH});
-      IEWH.enter().append("text")
-        .attr("x", function(OBXZ){return OBXZ.YOQB +JYGK.HKBN/3.25+ "vmin"})
-        .attr("y", function(OBXZ){return OBXZ.SPIT +JYGK.HKBN/1.35+ "vmin"})
+        .attr("font-size", SNQV.KDSO*ZYBA+"vmin")
+        .text(function(JIGV){return JIGV.PKYF});
+      PKYF.enter().append("text")
+        .attr("x", function(JIGV){return JIGV.KJJO +SNQV.KDSO/3.25+ "vmin"})
+        .attr("y", function(JIGV){return JIGV.QFKP +SNQV.KDSO/1.35+ "vmin"})
         .attr("fill","red")
         .attr("class","pretty_text")
-        .attr("font-size", JYGK.HKBN*XSNO+"vmin")
-        .text(function(OBXZ){return OBXZ.IEWH});
-      IEWH.exit().remove();
+        .attr("font-size", SNQV.KDSO*ZYBA+"vmin")
+        .text(function(JIGV){return JIGV.PKYF});
+      PKYF.exit().remove();
     }
   }
-  window.addEventListener("resize", JYGK.PWOT);
+  window.addEventListener("resize", SNQV.OYQV);
 }
 
 
 
-function QDFJ(RSLJ)  // This is a CLASS definition
+function MWBV(MTYU)  // This is a CLASS definition
 {
-  let JYGK = this;
-  let CZVT = false;
-  JYGK.WIMB = RSLJ;
+  let SNQV = this;
+  let HWTY = false;
+  SNQV.TMPD = MTYU;
 
-  JYGK.EBNP = function() {CZVT = true;}
-  JYGK.EIPT = function() {CZVT = false;}
+  SNQV.TUKO = function() {HWTY = true;}
+  SNQV.GQVT = function() {HWTY = false;}
 
-  JYGK.RGNL = function(SNEU) {
-    if (CZVT == true){
-      JYGK.WIMB(SNEU.key);
+  SNQV.ZYAU = function(JELS) {
+    if (HWTY == true){
+      SNQV.TMPD(JELS.key);
     }
   }
 
-  JYGK.CHOA = function() {
-    window.removeEventListener("keypress", JYGK.RGNL);
+  SNQV.MDSM = function() {
+    window.removeEventListener("keypress", SNQV.ZYAU);
   }
 
-  window.addEventListener('keypress', JYGK.RGNL);
+  window.addEventListener('keypress', SNQV.ZYAU);
 }
 
 
