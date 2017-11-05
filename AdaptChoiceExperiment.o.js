@@ -1,63 +1,63 @@
 'use strict'
 
-let FVOZ = function (XZHN) {console.log(XZHN);}
+let NHSS = function (UVSN) {console.log(UVSN);}
 
-function ROUU(XPES){
-  let BMZF = 0.0;
-  XPES.forEach(function(XZHN) {
-    BMZF += XZHN;
+function GGQS(NWHC){
+  let CSEF = 0.0;
+  NWHC.forEach(function(UVSN) {
+    CSEF += UVSN;
   });
-  BMZF /= XPES.NVPB;
-  return BMZF;
+  CSEF /= NWHC.CRQP;
+  return CSEF;
 }
 
-function OVGL(XPES){
-  let SDQT = mean(XPES);
-  let BMZF = 0.0;
-  XPES.forEach(function(XZHN){
-    BMZF += Math.abs(XZHN - SDQT);
+function PBLS(NWHC){
+  let TGSZ = mean(NWHC);
+  let CSEF = 0.0;
+  NWHC.forEach(function(UVSN){
+    CSEF += Math.abs(UVSN - TGSZ);
   });
-  BMZF /= XPES.length;
-  return BMZF;
+  CSEF /= NWHC.length;
+  return CSEF;
 }
 
-function OGCE(XPES){
-  let BMZF = stdev(XPES) / Math.sqrt(XPES.length);
-  return BMZF;
+function YQAT(NWHC){
+  let CSEF = stdev(NWHC) / Math.sqrt(NWHC.length);
+  return CSEF;
 }
 
-function KGHK(KWQG, HMUO, VYIZ=false){
-  if (VYIZ == false){
-    return Math.floor(Math.random() * (HMUO-KWQG)) + KWQG;
+function MFGD(HQOT, ENEE, UEEV=false){
+  if (UEEV == false){
+    return Math.floor(Math.random() * (ENEE-HQOT)) + HQOT;
   } else {
-    return Math.floor(Math.random() * (HMUO-KWQG+1)) + KWQG;
+    return Math.floor(Math.random() * (ENEE-HQOT+1)) + HQOT;
   }
 }
 
-function VFKT(KWQG, HMUO, VYIZ=false){
-  if (VYIZ == false){
-    return Math.random() * (HMUO-KWQG) + KWQG;
+function WSKV(HQOT, ENEE, UEEV=false){
+  if (UEEV == false){
+    return Math.random() * (ENEE-HQOT) + HQOT;
   } else {
-    return Math.random() * (HMUO-KWQG+1) + KWQG;
+    return Math.random() * (ENEE-HQOT+1) + HQOT;
   }
 }
 
-function USGP(WJPM){
-  let VILP = undefined;
-  let IRFV = undefined;
-  for (let ILPA = WJPM.length-1; ILPA >=0; ILPA--){
-    VILP = KGHK(0,ILPA,true);
-    IRFV = WJPM[VILP];
-    WJPM[VILP] = WJPM[ILPA];
-    WJPM[ILPA] = IRFV;
+function EWMT(OZFK){
+  let SEAA = undefined;
+  let DWLT = undefined;
+  for (let WDZZ = OZFK.length-1; WDZZ >=0; WDZZ--){
+    SEAA = MFGD(0,WDZZ,true);
+    DWLT = OZFK[SEAA];
+    OZFK[SEAA] = OZFK[WDZZ];
+    OZFK[WDZZ] = DWLT;
   }
-  return WJPM;
+  return OZFK;
 }
 
-function EBRT(VOXP){
+function XIIQ(GZXM){
   try{
-    VOXP.MDSM();
-  }catch(TSWQ){
+    GZXM.QTTD();
+  }catch(ZSLA){
   }finally{
     return undefined;
   }
@@ -65,34 +65,34 @@ function EBRT(VOXP){
 
 
 
-function VIDH (){  // This is a CLASS definition.
-  let SNQV = this;
+function YMAR (){  // This is a CLASS definition.
+  let AVAD = this;
 
-  SNQV.WJIK = (!!window.opr && !!opr.addons) ||
+  AVAD.UZXI = (!!window.opr && !!opr.addons) ||
                   !!window.opera ||
                   0 <= navigator.userAgent.indexOf(' OPR/');
-  SNQV.WNFI = 'undefined' !== typeof InstallTrigger;
-  SNQV.KUSN = /constructor/i.test(window.HTMLElement) ||
+  AVAD.EALN = 'undefined' !== typeof InstallTrigger;
+  AVAD.JKQK = /constructor/i.test(window.HTMLElement) ||
                   '[object SafariRemoteNotification]' === (!window.safari ||
                   ('undefined' !== typeof safari && safari.pushNotification)).toString();
-  SNQV.ASTE = !!document.documentMode;
-  SNQV.ZXJW = !SNQV.ASTE && !!window.StyleMedia;
-  SNQV.TCAG = !!window.chrome && !!window.chrome.webstore;
-  SNQV.IPIW = ((SNQV.TCAG = !!window.chrome &&
+  AVAD.XAGM = !!document.documentMode;
+  AVAD.MEEU = !AVAD.XAGM && !!window.StyleMedia;
+  AVAD.ZVAP = !!window.chrome && !!window.chrome.webstore;
+  AVAD.XNBN = ((AVAD.ZVAP = !!window.chrome &&
                    !!window.chrome.webstore) ||
-                   SNQV.WJIK) && !!window.CSS;
-  SNQV.OPXI = SNQV.WJIK ? "Opera" :
-                    (SNQV.WNFI ? "Firefox" :
-                    (SNQV.KUSN ? "Safari" :
-                    (SNQV.ASTE ? "IE" :
-                    (SNQV.ZXJW ? "Edge" :
-                    (SNQV.TCAG ? "Chrome" :
+                   AVAD.UZXI) && !!window.CSS;
+  AVAD.QBMU = AVAD.UZXI ? "Opera" :
+                    (AVAD.EALN ? "Firefox" :
+                    (AVAD.JKQK ? "Safari" :
+                    (AVAD.XAGM ? "IE" :
+                    (AVAD.MEEU ? "Edge" :
+                    (AVAD.ZVAP ? "Chrome" :
                     "Unknown Browser")))))
-  SNQV.QFTE = window.devicePixelRatio;
-  SNQV.CSUE = $(window).height();
-  SNQV.MPWI = $(window).width();
-  SNQV.TZBJ = Math.round(SNQV.QFTE * SNQV.CSUE);
-  SNQV.TCJC = Math.round(SNQV.QFTE * SNQV.MPWI);
+  AVAD.QHRK = window.devicePixelRatio;
+  AVAD.GOXC = $(window).height();
+  AVAD.CBTE = $(window).width();
+  AVAD.KFAI = Math.round(AVAD.QHRK * AVAD.GOXC);
+  AVAD.ZHNC = Math.round(AVAD.QHRK * AVAD.CBTE);
 }
 
 
@@ -101,455 +101,455 @@ function VIDH (){  // This is a CLASS definition.
 
 function UserData()  // This is a CLASS definition
 {
-  let SNQV = this;
-  SNQV.data = [];
-  SNQV.push = function(datum) { SNQV.data.push(datum); }
+  let AVAD = this;
+  AVAD.data = [];
+  AVAD.push = function(datum) { AVAD.data.push(datum); }
 }
 function UserDatum(type, value, timestamp=performance.now())  // This is a CLASS definition
 {
-  let SNQV = this;
-  SNQV.type = type;
-  SNQV.value = value;
-  SNQV.timestamp = timestamp;
+  let AVAD = this;
+  AVAD.type = type;
+  AVAD.value = value;
+  AVAD.timestamp = timestamp;
 }
 
 
-function Experiment(MDAP)  // This is a CLASS definition
+function Experiment(GUML)  // This is a CLASS definition
 {
-  let SNQV = this;
+  let AVAD = this;
   { // Initialize the CLASS's properties ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    SNQV.CNBP = new Object;
-      SNQV.CNBP.XRDN = "Adaptive Choice Visual Search Task";
+    AVAD.RDHJ = new Object;
+      AVAD.RDHJ.RRBI = "Adaptive Choice Visual Search Task";
 
-      SNQV.CNBP.IGAM = 90;  // percent relative to browser minimum dimension.
-      SNQV.CNBP.VRFE = 45;  // percent relative to browser minimum dimension.
-      SNQV.CNBP.KDSO = 4;  // percent relative to the browser minimum dimension.
+      AVAD.RDHJ.VZMY = 90;  // percent relative to browser minimum dimension.
+      AVAD.RDHJ.ALUL = 45;  // percent relative to browser minimum dimension.
+      AVAD.RDHJ.MXLW = 4;  // percent relative to the browser minimum dimension.
 
-      SNQV.CNBP.KOCX = "rgb(255,255,255)";
+      AVAD.RDHJ.AXZW = "rgb(255,255,255)";
 
-      SNQV.CNBP.TLPJ = "rgb( 255,   0,   0 )";
-      SNQV.CNBP.CFAX = "rgb(   0,   0, 255 )";
-      SNQV.CNBP.SOST = "rgb(   0, 255,   0 )";
-      //SNQV.CNBP.TLPJ = "rgb(  27, 158, 119 )"; // colorblind friendly colors
-      //SNQV.CNBP.CFAX = "rgb( 217,  95,   2 )";
-      //SNQV.CNBP.SOST = "rgb( 117, 112, 179 )";
+      AVAD.RDHJ.PCWP = "rgb( 255,   0,   0 )";
+      AVAD.RDHJ.UFQA = "rgb(   0,   0, 255 )";
+      AVAD.RDHJ.SADT = "rgb(   0, 255,   0 )";
+      //AVAD.RDHJ.PCWP = "rgb(  27, 158, 119 )"; // colorblind friendly colors
+      //AVAD.RDHJ.UFQA = "rgb( 217,  95,   2 )";
+      //AVAD.RDHJ.SADT = "rgb( 117, 112, 179 )";
 
-      SNQV.CNBP.LXIC = [12, 18, 24];
-      SNQV.CNBP.NHOG    = 12;  // for each color_1 and color_2
-      SNQV.CNBP.DXOM = 14;  // for color_1 or color_2
-      SNQV.CNBP.BTVB      = 14;  // for color_3
+      AVAD.RDHJ.VXHW = [12, 18, 24];
+      AVAD.RDHJ.ZIHX    = 12;  // for each color_1 and color_2
+      AVAD.RDHJ.KBUL = 14;  // for color_1 or color_2
+      AVAD.RDHJ.XEAZ      = 14;  // for color_3
 
-      SNQV.CNBP.ZWTR     = [ 2, 3, 4, 5 ];
-      SNQV.CNBP.DCGC = [ 6, 7, 8, 9 ];
-      SNQV.CNBP.EHBB       = new Map([[ "v", SNQV.CNBP.ZWTR[0]],
-                                                  [ "b", SNQV.CNBP.ZWTR[1]],
-                                                  [ "n", SNQV.CNBP.ZWTR[2]],
-                                                  [ "m", SNQV.CNBP.ZWTR[3]]])
+      AVAD.RDHJ.QIQI     = [ 2, 3, 4, 5 ];
+      AVAD.RDHJ.ZWVV = [ 6, 7, 8, 9 ];
+      AVAD.RDHJ.GKRP       = new Map([[ "v", AVAD.RDHJ.QIQI[0]],
+                                                  [ "b", AVAD.RDHJ.QIQI[1]],
+                                                  [ "n", AVAD.RDHJ.QIQI[2]],
+                                                  [ "m", AVAD.RDHJ.QIQI[3]]])
 
-    SNQV.MDAP = MDAP;
-    SNQV.YDQR = -1;
-    SNQV.KLQP = new UserData();
-    SNQV.KLQP.push( new UserDatum("event", "experiment_initialized") );
+    AVAD.GUML = GUML;
+    AVAD.VBOI = -1;
+    AVAD.QAQJ = new UserData();
+    AVAD.QAQJ.push( new UserDatum("event", "experiment_initialized") );
   } // end properties
 
   { // Define the CLASS's methods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    SNQV.run = function (){
-      let NSJE = [[SNQV.TISI, null],
-                    [SNQV.GWUK, null],
-                    [SNQV.JXNM, null],
-                    [SNQV.EVFJ, [3]],
-                    [SNQV.YSBO, [0, 5]],
-                    [SNQV.YSBO, [1, 5]],
-                    [SNQV.YSBO, [2, 5]],
-                    [SNQV.XTED, null]];
-      if (SNQV.YDQR < (NSJE.length-1)){
-        SNQV.YDQR++;
-        let ILPA = SNQV.YDQR;
-        NSJE[ILPA][0].apply(null,NSJE[ILPA][1]);
+    AVAD.run = function (){
+      let KIBP = [[AVAD.GSQF, null],
+                    [AVAD.XVLX, null],
+                    [AVAD.ZLQE, null],
+                    [AVAD.DJJB, [3]],
+                    [AVAD.BTGR, [0, 5]],
+                    [AVAD.BTGR, [1, 5]],
+                    [AVAD.BTGR, [2, 5]],
+                    [AVAD.JOTE, null]];
+      if (AVAD.VBOI < (KIBP.length-1)){
+        AVAD.VBOI++;
+        let WDZZ = AVAD.VBOI;
+        KIBP[WDZZ][0].apply(null,KIBP[WDZZ][1]);
       }
     }
 
 
-    SNQV.DQEF = function(){
+    AVAD.CESI = function(){
       d3.selectAll("#workspace").data([]).exit().remove();
-      MDAP.selectAll("div").data([1])
+      GUML.selectAll("div").data([1])
         .enter().append("div")
           .attr("id", "workspace");
       return d3.select("#workspace");
     }
 
-    SNQV.HGJY = function(){
+    AVAD.TFZF = function(){
       d3.selectAll(".headeR").data([]).exit().remove();
     }
 
 
-    SNQV.TISI = function(){
-      let IXDP = SNQV.DQEF();
-      let BYDU = [ "<hr>",
+    AVAD.GSQF = function(){
+      let GGVF = AVAD.CESI();
+      let ABFK = [ "<hr>",
                    "Running Self Tests ... Completed",
                    "<hr>",
                    "Continue?"
                  ]
-      IXDP.selectAll("p").data(BYDU)
+      GGVF.selectAll("p").data(ABFK)
         .enter().append("p")
           .html(function(d){return d;});
 
-      let OLID = IXDP.selectAll("button").data(["Yes"]).enter().append("button");
-      OLID.text(function(d){return d;});
-      OLID.attr("id", function(d){return d;});
-      OLID.on("click", function(){SNQV.run();})
+      let WVFY = GGVF.selectAll("button").data(["Yes"]).enter().append("button");
+      WVFY.text(function(d){return d;});
+      WVFY.attr("id", function(d){return d;});
+      WVFY.on("click", function(){AVAD.run();})
     }
 
 
-    SNQV.GWUK = function(){
-      let IXDP = SNQV.DQEF();
+    AVAD.XVLX = function(){
+      let GGVF = AVAD.CESI();
 
-      let COGT = new VIDH();
-      let BYDU = [ "<hr>",
-                   "Browser Name: " + COGT.OPXI,
-                   "Browser's Screen Width: " + COGT.TCJC,
-                   "Browser's Screen Height: " + COGT.TZBJ,
+      let XAAX = new YMAR();
+      let ABFK = [ "<hr>",
+                   "Browser Name: " + XAAX.QBMU,
+                   "Browser's Screen Width: " + XAAX.ZHNC,
+                   "Browser's Screen Height: " + XAAX.KFAI,
                    "<hr>",
                    "Will you allow us to collect the above information?"
                  ]
 
-      IXDP.selectAll("p").data(BYDU)
+      GGVF.selectAll("p").data(ABFK)
         .enter().append("p")
-          .html(function(JIGV){return JIGV;});
+          .html(function(VAIL){return VAIL;});
 
-      let OLID = IXDP.selectAll("button").data(["Yes"]).enter().append("button");
-      OLID.text(function(JIGV){return JIGV;});
-      OLID.attr("id", function(JIGV){return JIGV;});
-      OLID.on("click", function(){SNQV.run();})
+      let WVFY = GGVF.selectAll("button").data(["Yes"]).enter().append("button");
+      WVFY.text(function(VAIL){return VAIL;});
+      WVFY.attr("id", function(VAIL){return VAIL;});
+      WVFY.on("click", function(){AVAD.run();})
     }
 
 
-    SNQV.JXNM = function(){
-      let IXDP = SNQV.DQEF();
-      let BYDU = [ "<hr>",
+    AVAD.ZLQE = function(){
+      let GGVF = AVAD.CESI();
+      let ABFK = [ "<hr>",
                    "Instructions!",
                    "<hr>",
                    "Click to start tutorial:"
                  ]
-      IXDP.selectAll("p").data(BYDU)
+      GGVF.selectAll("p").data(ABFK)
         .enter().append("p")
-          .html(function(JIGV){return JIGV});
+          .html(function(VAIL){return VAIL});
 
-      let OLID = IXDP.selectAll("button").data(["Yes"]).enter().append("button");
-      OLID.text(function(JIGV){return JIGV;});
-      OLID.attr("id", function(JIGV){return JIGV;});
-      OLID.on("click", function(){SNQV.run();})
+      let WVFY = GGVF.selectAll("button").data(["Yes"]).enter().append("button");
+      WVFY.text(function(VAIL){return VAIL;});
+      WVFY.attr("id", function(VAIL){return VAIL;});
+      WVFY.on("click", function(){AVAD.run();})
     }
 
 
-    SNQV.EVFJ = function(UTYL=1){
-      let IXDP = SNQV.DQEF();
-      SNQV.YSBO(-1, UTYL);  //TODO(KAL)
+    AVAD.DJJB = function(CIDF=1){
+      let GGVF = AVAD.CESI();
+      AVAD.BTGR(-1, CIDF);  //TODO(KAL)
     }
 
 
-    SNQV.YSBO = function(JFRS, UTYL=1){
-      function BKQT(PKYF, NOAT, CEVI=false){
-        let SNQV = this;
-        if (CEVI == true){
-          SNQV.PKYF = KGHK(0, 9, true);
-          let AWOX = KGHK(0, 2, true);
-          if (AWOX == 0) { SNQV.NOAT = SNQV.CNBP.TLPJ; }
-          else if (AWOX == 1) { SNQV.NOAT = SNQV.CNBP.CFAX; }
-          else { SNQV.NOAT = SNQV.CNBP.SOST; }
+    AVAD.BTGR = function(NLZN, CIDF=1){
+      function QXCM(IVEF, RJXY, HYVC=false){
+        let AVAD = this;
+        if (HYVC == true){
+          AVAD.IVEF = MFGD(0, 9, true);
+          let TXQA = MFGD(0, 2, true);
+          if (TXQA == 0) { AVAD.RJXY = AVAD.RDHJ.PCWP; }
+          else if (TXQA == 1) { AVAD.RJXY = AVAD.RDHJ.UFQA; }
+          else { AVAD.RJXY = AVAD.RDHJ.SADT; }
         } else {
-          SNQV.PKYF = PKYF;
-          SNQV.NOAT = NOAT;
+          AVAD.IVEF = IVEF;
+          AVAD.RJXY = RJXY;
         }
-        return SNQV;
+        return AVAD;
       }
 
 
-      let YNOH = undefined;
-      let MNSW = undefined;
-      function CUUF(){
-        function WXTT(WJPM, HFEM=null){
-          let OTBX = KGHK(0, WJPM.length);
-          let GFOH = WJPM[OTBX];
-          if (GFOH === HFEM){
-            return WXTT(WJPM, HFEM);
+      let YOJH = undefined;
+      let XJEU = undefined;
+      function QEFI(){
+        function HMPW(OZFK, IYBE=null){
+          let MIJU = MFGD(0, OZFK.length);
+          let OXTL = OZFK[MIJU];
+          if (OXTL === IYBE){
+            return HMPW(OZFK, IYBE);
           }
-          return GFOH;
+          return OXTL;
         }
 
-        let MLCL = [];
+        let PEFJ = [];
 
         { // Push Back Targets:
-          YNOH = WXTT(SNQV.CNBP.ZWTR);
-          MNSW = WXTT(SNQV.CNBP.ZWTR, YNOH);
-          MLCL.push( new BKQT(YNOH, SNQV.CNBP.TLPJ) );
-          MLCL.push( new BKQT(MNSW, SNQV.CNBP.CFAX) );
+          YOJH = HMPW(AVAD.RDHJ.QIQI);
+          XJEU = HMPW(AVAD.RDHJ.QIQI, YOJH);
+          PEFJ.push( new QXCM(YOJH, AVAD.RDHJ.PCWP) );
+          PEFJ.push( new QXCM(XJEU, AVAD.RDHJ.UFQA) );
         }
         { // Push Color_1, Color_2, and Color_3 fixed distractors
-          let AOIM = undefined;
-          let MDLO = SNQV.CNBP.NHOG;
-          for (let ILPA = 0; ILPA < MDLO; ILPA++){
-            AOIM = WXTT(SNQV.CNBP.DCGC);
-            MLCL.push( new BKQT(AOIM, SNQV.CNBP.TLPJ) );
+          let KUDX = undefined;
+          let LHQN = AVAD.RDHJ.ZIHX;
+          for (let WDZZ = 0; WDZZ < LHQN; WDZZ++){
+            KUDX = HMPW(AVAD.RDHJ.ZWVV);
+            PEFJ.push( new QXCM(KUDX, AVAD.RDHJ.PCWP) );
           }
-          MDLO = SNQV.CNBP.NHOG;
-          for (let ILPA = 0; ILPA < MDLO; ILPA++){
-            AOIM = WXTT(SNQV.CNBP.DCGC);
-            MLCL.push( new BKQT(AOIM, SNQV.CNBP.CFAX) );
+          LHQN = AVAD.RDHJ.ZIHX;
+          for (let WDZZ = 0; WDZZ < LHQN; WDZZ++){
+            KUDX = HMPW(AVAD.RDHJ.ZWVV);
+            PEFJ.push( new QXCM(KUDX, AVAD.RDHJ.UFQA) );
           }
-          MDLO = SNQV.CNBP.BTVB;
-          for (let ILPA = 0; ILPA < MDLO; ILPA++){
-            AOIM = WXTT(SNQV.CNBP.DCGC);
-            MLCL.push( new BKQT(AOIM, SNQV.CNBP.SOST) );
+          LHQN = AVAD.RDHJ.XEAZ;
+          for (let WDZZ = 0; WDZZ < LHQN; WDZZ++){
+            KUDX = HMPW(AVAD.RDHJ.ZWVV);
+            PEFJ.push( new QXCM(KUDX, AVAD.RDHJ.SADT) );
           }
         }
         { // Push Color_1 and Color_2 variable distractors
-          let AOIM = undefined;
-          let PHGI = undefined;
-          let YVOS = [ SNQV.CNBP.TLPJ, SNQV.CNBP.CFAX ]
-          let MDLO = SNQV.CNBP.DXOM;
-          for (let ILPA = 0; ILPA < MDLO; ILPA++){
-            AOIM = WXTT(SNQV.CNBP.DCGC);
-            PHGI = WXTT(YVOS);
-            MLCL.push( new BKQT(AOIM, PHGI) );
+          let KUDX = undefined;
+          let EKHQ = undefined;
+          let GHFI = [ AVAD.RDHJ.PCWP, AVAD.RDHJ.UFQA ]
+          let LHQN = AVAD.RDHJ.KBUL;
+          for (let WDZZ = 0; WDZZ < LHQN; WDZZ++){
+            KUDX = HMPW(AVAD.RDHJ.ZWVV);
+            EKHQ = HMPW(GHFI);
+            PEFJ.push( new QXCM(KUDX, EKHQ) );
           }
         }
-        let BMZF = undefined;
+        let CSEF = undefined;
         { // randomize order and split into sub-arrays
-          let QRLB = USGP(MLCL);
-          let WJPM = SNQV.CNBP.LXIC[0];
-          let TGDB = SNQV.CNBP.LXIC[1];
-          let HZED = SNQV.CNBP.LXIC[2];
-          BMZF = [QRLB.slice(WJPM+TGDB, WJPM+TGDB+HZED),
-                    QRLB.slice(WJPM, WJPM+TGDB),
-                    QRLB.slice(0, WJPM)];
+          let REKI = EWMT(PEFJ);
+          let OZFK = AVAD.RDHJ.VXHW[0];
+          let XSCP = AVAD.RDHJ.VXHW[1];
+          let YLGT = AVAD.RDHJ.VXHW[2];
+          CSEF = [REKI.slice(OZFK+XSCP, OZFK+XSCP+YLGT),
+                    REKI.slice(OZFK, OZFK+XSCP),
+                    REKI.slice(0, OZFK)];
         }
 
-        return BMZF;
+        return CSEF;
       }
 
-      function ZYAU(KFSJ){
-        SNQV.KLQP.push( new UserDatum("event.key_press.trial-"+EFEQ, KFSJ) );
-        if (SNQV.CNBP.EHBB.has(KFSJ))
+      function GUOD(ACWV){
+        AVAD.QAQJ.push( new UserDatum("event.key_press.trial-"+YFSJ, ACWV) );
+        if (AVAD.RDHJ.GKRP.has(ACWV))
         {
-          TCJF.GQVT();
-          RCZT.CCJN();
-          let HTEZ = "data.in.user_answer.block-" + JFRS + ".trial-" + EFEQ;
-          if (SNQV.CNBP.EHBB.get(KFSJ) == YNOH)
+          MBFL.RPAT();
+          HOFE.UWFZ();
+          let SRKR = "data.in.user_answer.block-" + NLZN + ".trial-" + YFSJ;
+          if (AVAD.RDHJ.GKRP.get(ACWV) == YOJH)
           {
-            SNQV.KLQP.push( new UserDatum(HTEZ, "correct_1") );
-            CZUS++;
-          } else if (SNQV.CNBP.EHBB.get(KFSJ) == MNSW) {
-            SNQV.KLQP.push( new UserDatum(HTEZ, "correct_2") );
-            CZUS++;
+            AVAD.QAQJ.push( new UserDatum(SRKR, "correct_1") );
+            TYQO++;
+          } else if (AVAD.RDHJ.GKRP.get(ACWV) == XJEU) {
+            AVAD.QAQJ.push( new UserDatum(SRKR, "correct_2") );
+            TYQO++;
           } else {
-            SNQV.KLQP.push( new UserDatum(HTEZ, "incorrect") );
+            AVAD.QAQJ.push( new UserDatum(SRKR, "incorrect") );
           }
-          SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".trial-"+EFEQ, "chart_cleared") );
-          setTimeout(GLZD, 500);
+          AVAD.QAQJ.push( new UserDatum("event.block-"+NLZN+".trial-"+YFSJ, "chart_cleared") );
+          setTimeout(ZNFY, 500);
         }
       }
-      let EFEQ = 0;
-      function GLZD() {
-        if (EFEQ < UTYL){
-          EFEQ++;
-          let BYDU = CUUF();
-          SNQV.KLQP.push( new UserDatum("data.chart_data.block-"+JFRS+".trial-"+EFEQ, BYDU) );
-          RCZT.JFKI( BYDU );
-          RCZT.OYQV();
-          TCJF.TUKO();
-          SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".trial-"+EFEQ, "chart_shown") );
-          FVOZ(SNQV.KLQP);
+      let YFSJ = 0;
+      function ZNFY() {
+        if (YFSJ < CIDF){
+          YFSJ++;
+          let ABFK = QEFI();
+          AVAD.QAQJ.push( new UserDatum("data.chart_data.block-"+NLZN+".trial-"+YFSJ, ABFK) );
+          HOFE.XXDS( ABFK );
+          HOFE.ADZL();
+          MBFL.MNAM();
+          AVAD.QAQJ.push( new UserDatum("event.block-"+NLZN+".trial-"+YFSJ, "chart_shown") );
+          NHSS(AVAD.QAQJ);
         } else {
-          RCZT = EBRT(RCZT);
-          TCJF = EBRT(TCJF);
+          HOFE = XIIQ(HOFE);
+          MBFL = XIIQ(MBFL);
           alert("You have finished this block!");
-          YUNV();
+          LLDN();
         }
       }
-      function YUNV() {
-        PWCE = CZUS / UTYL;
-        SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".num_trials", UTYL) );
-        SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".num_correct", CZUS) );
-        SNQV.KLQP.push( new UserDatum("event.block-"+JFRS+".accuracy", PWCE) );
-        alert("Your accuracy for this block was: " + PWCE*100 + "%");
-        SNQV.run();
+      function LLDN() {
+        ZLZN = TYQO / CIDF;
+        AVAD.QAQJ.push( new UserDatum("event.block-"+NLZN+".num_trials", CIDF) );
+        AVAD.QAQJ.push( new UserDatum("event.block-"+NLZN+".num_correct", TYQO) );
+        AVAD.QAQJ.push( new UserDatum("event.block-"+NLZN+".accuracy", ZLZN) );
+        alert("Your accuracy for this block was: " + ZLZN*100 + "%");
+        AVAD.run();
       }
 
       // Start:
-      let IXDP = SNQV.DQEF();
-      SNQV.HGJY();
-      let TCJF = new MWBV(ZYAU);
-      let RCZT = new GXZJ(IXDP);
-      RCZT.WZMH( SNQV.CNBP.VRFE );
-      RCZT.WRBB( SNQV.CNBP.KDSO );
-      RCZT.XIXD( SNQV.CNBP.KOCX );
-      let CZUS = 0;
-      let PWCE = 0.0;
-      GLZD();
+      let GGVF = AVAD.CESI();
+      AVAD.TFZF();
+      let MBFL = new IOZY(GUOD);
+      let HOFE = new YJSM(GGVF);
+      HOFE.WORE( AVAD.RDHJ.ALUL );
+      HOFE.AKAI( AVAD.RDHJ.MXLW );
+      HOFE.JYOU( AVAD.RDHJ.AXZW );
+      let TYQO = 0;
+      let ZLZN = 0.0;
+      ZNFY();
     }
 
-    SNQV.XTED = function() {
-      let IXDP = SNQV.DQEF();
-      let RLRJ = d3.selectAll("#submitButton");
-      RLRJ.style("display", "block");
+    AVAD.JOTE = function() {
+      let GGVF = AVAD.CESI();
+      let HSMK = d3.selectAll("#submitButton");
+      HSMK.style("display", "block");
 
-      let IPVY = d3.selectAll("[name=user_result]");
-      IPVY.attr("value", JSON.stringify(SNQV.KLQP.BYDU));
+      let YNHE = d3.selectAll("[name=user_result]");
+      YNHE.attr("value", JSON.stringify(AVAD.QAQJ.data));
     }
 
-    SNQV.UYRI = function(){}
-    SNQV.KFVF = function() {return SNQV.KLQP;}
-    SNQV.XLZO = function(XJRB){}
+    AVAD.YFTN = function(){}
+    AVAD.CLHE = function() {return AVAD.QAQJ;}
+    AVAD.GPVM = function(RMRL){}
   }  // end methods
 }  // end Experiment
 
 
 
-function GXZJ(VLCA)  // This is a CLASS definition.
+function YJSM(FLWX)  // This is a CLASS definition.
 {
-  let SNQV = this;
+  let AVAD = this;
 
-  SNQV.VLCA = VLCA;
-  SNQV.ZXEL = 0;
-  SNQV.KDSO = 0;
-  SNQV.KOCX = 0;
-  SNQV.BYDU = 0;
+  AVAD.FLWX = FLWX;
+  AVAD.HZDA = 0;
+  AVAD.MXLW = 0;
+  AVAD.AXZW = 0;
+  AVAD.ABFK = 0;
 
-  SNQV.MDSM = function() {
-    SNQV.VLCA.selectAll("svg").data([]).exit().remove();
-    window.removeEventListener("resize", SNQV.OYQV);
+  AVAD.QTTD = function() {
+    AVAD.FLWX.selectAll("svg").data([]).exit().remove();
+    window.removeEventListener("resize", AVAD.ADZL);
   }
-  SNQV.CCJN = function() {
-    SNQV.VLCA.selectAll("text").data([]).exit().remove();
-    SNQV.VLCA.selectAll("rect").data([]).exit().remove();
+  AVAD.UWFZ = function() {
+    AVAD.FLWX.selectAll("text").data([]).exit().remove();
+    AVAD.FLWX.selectAll("rect").data([]).exit().remove();
   }
-  SNQV.WZMH = function(DIAD){ SNQV.ZXEL = DIAD; }
-  SNQV.WRBB = function(NDRM){ SNQV.KDSO = NDRM; }
-  SNQV.XIXD = function(NOAT){ SNQV.KOCX = NOAT; }
-  SNQV.JFKI = function(BYDU){ SNQV.BYDU = BYDU; }
-  SNQV.OYQV = function(){
-    let TLET;
+  AVAD.WORE = function(LYHU){ AVAD.HZDA = LYHU; }
+  AVAD.AKAI = function(QKRJ){ AVAD.MXLW = QKRJ; }
+  AVAD.JYOU = function(RJXY){ AVAD.AXZW = RJXY; }
+  AVAD.XXDS = function(ABFK){ AVAD.ABFK = ABFK; }
+  AVAD.ADZL = function(){
+    let LNBZ;
     { // create svg element
-      TLET = SNQV.VLCA.selectAll("svg").data([1]);
-      TLET.enter().append("svg")
+      LNBZ = AVAD.FLWX.selectAll("svg").data([1]);
+      LNBZ.enter().append("svg")
         .attr("height", "95vh")
         .attr("width", "95vmin");
-      TLET.exit().remove();
-      TLET = SNQV.VLCA.selectAll("svg");
+      LNBZ.exit().remove();
+      LNBZ = AVAD.FLWX.selectAll("svg");
     }
 
     { // draw cross
-      let WJPM = SNQV.KDSO / 2;
-      let KKVV = {HSJX:49*.9+WJPM+"vmin", KTYP:51*.9+WJPM+"vmin",
-                   EJAF:50*.9+WJPM+"vmin", HEHA:50*.9+WJPM+"vmin",
-                   LLXF:2, HZED:SNQV.KOCX};
+      let OZFK = AVAD.MXLW / 2;
+      let AWHL = {SBXC:49*.9+OZFK+"vmin", BAQH:51*.9+OZFK+"vmin",
+                   CHTP:50*.9+OZFK+"vmin", BRRE:50*.9+OZFK+"vmin",
+                   LEIU:2, YLGT:AVAD.AXZW};
 
-      let BYEG = {EJAF:49*.9+WJPM+"vmin", HEHA:51*.9+WJPM+"vmin",
-                   HSJX:50*.9+WJPM+"vmin", KTYP:50*.9+WJPM+"vmin",
-                   LLXF:2, HZED:SNQV.KOCX};
+      let VUUV = {CHTP:49*.9+OZFK+"vmin", BRRE:51*.9+OZFK+"vmin",
+                   SBXC:50*.9+OZFK+"vmin", BAQH:50*.9+OZFK+"vmin",
+                   LEIU:2, YLGT:AVAD.AXZW};
 
-      let XHMD = TLET.selectAll("line").data( [KKVV, BYEG] );
-      XHMD.attr("x1", function(JIGV){return JIGV.HSJX;})
-          .attr("x2", function(JIGV){return JIGV.KTYP;})
-          .attr("y1", function(JIGV){return JIGV.EJAF;})
-          .attr("y2", function(JIGV){return JIGV.HEHA;})
-          .attr("stroke", function(JIGV){return JIGV.HZED;})
-          .attr("stroke-width", function(JIGV){return JIGV.LLXF;});
-      XHMD.enter().append("line")
-          .attr("x1", function(JIGV){return JIGV.HSJX;})
-          .attr("x2", function(JIGV){return JIGV.KTYP;})
-          .attr("y1", function(JIGV){return JIGV.EJAF;})
-          .attr("y2", function(JIGV){return JIGV.HEHA;})
-          .attr("stroke", function(JIGV){return JIGV.HZED;})
-          .attr("stroke-width", function(JIGV){return JIGV.LLXF;});
-      XHMD.exit().remove();
+      let ORJI = LNBZ.selectAll("line").data( [AWHL, VUUV] );
+      ORJI.attr("x1", function(VAIL){return VAIL.SBXC;})
+          .attr("x2", function(VAIL){return VAIL.BAQH;})
+          .attr("y1", function(VAIL){return VAIL.CHTP;})
+          .attr("y2", function(VAIL){return VAIL.BRRE;})
+          .attr("stroke", function(VAIL){return VAIL.YLGT;})
+          .attr("stroke-width", function(VAIL){return VAIL.LEIU;});
+      ORJI.enter().append("line")
+          .attr("x1", function(VAIL){return VAIL.SBXC;})
+          .attr("x2", function(VAIL){return VAIL.BAQH;})
+          .attr("y1", function(VAIL){return VAIL.CHTP;})
+          .attr("y2", function(VAIL){return VAIL.BRRE;})
+          .attr("stroke", function(VAIL){return VAIL.YLGT;})
+          .attr("stroke-width", function(VAIL){return VAIL.LEIU;});
+      ORJI.exit().remove();
     }
 
     { // draw the squares
-      function CYZB( EBEO, KJJO, QFKP, PKYF, XMVJ, ORRT) {
-        let SNQV = this;
-        SNQV.EBEO = EBEO;
-        SNQV.KJJO = KJJO;
-        SNQV.QFKP = QFKP;
-        SNQV.PKYF = PKYF;
-        SNQV.XMVJ = XMVJ;
-        SNQV.ORRT = ORRT;
-        return SNQV;
+      function HAQO( BURN, SVLX, TFML, IVEF, VDUG, RQSD) {
+        let AVAD = this;
+        AVAD.BURN = BURN;
+        AVAD.SVLX = SVLX;
+        AVAD.TFML = TFML;
+        AVAD.IVEF = IVEF;
+        AVAD.VDUG = VDUG;
+        AVAD.RQSD = RQSD;
+        return AVAD;
       }
 
-      let CPZY = SNQV.KDSO + "vmin";
+      let KCBJ = AVAD.MXLW + "vmin";
 
-      function AIEZ(RMUE, DIAD, OEOR, OUQK) {
-        let WTDN = 2 * Math.PI / RMUE.length;
-        let BMZF = []
-        for (let ILPA=0; ILPA<RMUE.length; ILPA++)
+      function UTEY(QIZH, LYHU, OLZE, UJKY) {
+        let JXTG = 2 * Math.PI / QIZH.length;
+        let CSEF = []
+        for (let WDZZ=0; WDZZ<QIZH.length; WDZZ++)
         {
-          let KJJO = (Math.cos(WTDN * ILPA + Math.PI / 2) * DIAD + OEOR)*0.9;
-          let QFKP = (Math.sin(WTDN * ILPA + Math.PI / 2) * DIAD + OUQK)*0.9;
-          BMZF.push(new CYZB(RMUE[ILPA].NOAT, KJJO, QFKP, RMUE[ILPA].PKYF, CPZY, CPZY));
+          let SVLX = (Math.cos(JXTG * WDZZ + Math.PI / 2) * LYHU + OLZE)*0.9;
+          let TFML = (Math.sin(JXTG * WDZZ + Math.PI / 2) * LYHU + UJKY)*0.9;
+          CSEF.push(new HAQO(QIZH[WDZZ].RJXY, SVLX, TFML, QIZH[WDZZ].IVEF, KCBJ, KCBJ));
         }
-        return BMZF;
+        return CSEF;
       }
 
-      let VUJC = SNQV.ZXEL;
-      let BYDU = AIEZ(SNQV.BYDU[0],VUJC*1.00,50,50).concat(
-                 AIEZ(SNQV.BYDU[1],VUJC*0.75,50,50).concat(
-                 AIEZ(SNQV.BYDU[2],VUJC*0.50,50,50)));
+      let OIZO = AVAD.HZDA;
+      let ABFK = UTEY(AVAD.ABFK[0],OIZO*1.00,50,50).concat(
+                 UTEY(AVAD.ABFK[1],OIZO*0.75,50,50).concat(
+                 UTEY(AVAD.ABFK[2],OIZO*0.50,50,50)));
 
-      let KHSX = TLET.selectAll("rect").data( BYDU );
-      KHSX.enter().append("rect")
-        .attr("width", function(JIGV){return JIGV.XMVJ})
-        .attr("height", function(JIGV){return JIGV.ORRT})
-        .attr("x", function(JIGV){return JIGV.KJJO + "vmin"})
-        .attr("y", function(JIGV){return JIGV.QFKP + "vmin"})
-        .attr("fill", function(JIGV){return JIGV.EBEO});
-      KHSX.exit().remove();
+      let ZPWR = LNBZ.selectAll("rect").data( ABFK );
+      ZPWR.enter().append("rect")
+        .attr("width", function(VAIL){return VAIL.VDUG})
+        .attr("height", function(VAIL){return VAIL.RQSD})
+        .attr("x", function(VAIL){return VAIL.SVLX + "vmin"})
+        .attr("y", function(VAIL){return VAIL.TFML + "vmin"})
+        .attr("fill", function(VAIL){return VAIL.BURN});
+      ZPWR.exit().remove();
 
-      let ZYBA = 0.65;
+      let LRJD = 0.65;
 
-      let PKYF = TLET.selectAll("text").data( BYDU );
-      PKYF.attr("x", function(JIGV){return JIGV.KJJO +SNQV.KDSO/3.25+ "vmin"})
-        .attr("y", function(JIGV){return JIGV.QFKP +SNQV.KDSO/1.35+ "vmin"})
+      let IVEF = LNBZ.selectAll("text").data( ABFK );
+      IVEF.attr("x", function(VAIL){return VAIL.SVLX +AVAD.MXLW/3.25+ "vmin"})
+        .attr("y", function(VAIL){return VAIL.TFML +AVAD.MXLW/1.35+ "vmin"})
         .attr("fill","red")
         .attr("class","pretty_text")
-        .attr("font-size", SNQV.KDSO*ZYBA+"vmin")
-        .text(function(JIGV){return JIGV.PKYF});
-      PKYF.enter().append("text")
-        .attr("x", function(JIGV){return JIGV.KJJO +SNQV.KDSO/3.25+ "vmin"})
-        .attr("y", function(JIGV){return JIGV.QFKP +SNQV.KDSO/1.35+ "vmin"})
+        .attr("font-size", AVAD.MXLW*LRJD+"vmin")
+        .text(function(VAIL){return VAIL.IVEF});
+      IVEF.enter().append("text")
+        .attr("x", function(VAIL){return VAIL.SVLX +AVAD.MXLW/3.25+ "vmin"})
+        .attr("y", function(VAIL){return VAIL.TFML +AVAD.MXLW/1.35+ "vmin"})
         .attr("fill","red")
         .attr("class","pretty_text")
-        .attr("font-size", SNQV.KDSO*ZYBA+"vmin")
-        .text(function(JIGV){return JIGV.PKYF});
-      PKYF.exit().remove();
+        .attr("font-size", AVAD.MXLW*LRJD+"vmin")
+        .text(function(VAIL){return VAIL.IVEF});
+      IVEF.exit().remove();
     }
   }
-  window.addEventListener("resize", SNQV.OYQV);
+  window.addEventListener("resize", AVAD.ADZL);
 }
 
 
 
-function MWBV(MTYU)  // This is a CLASS definition
+function IOZY(ECKD)  // This is a CLASS definition
 {
-  let SNQV = this;
-  let HWTY = false;
-  SNQV.TMPD = MTYU;
+  let AVAD = this;
+  let VKGS = false;
+  AVAD.DIDF = ECKD;
 
-  SNQV.TUKO = function() {HWTY = true;}
-  SNQV.GQVT = function() {HWTY = false;}
+  AVAD.MNAM = function() {VKGS = true;}
+  AVAD.RPAT = function() {VKGS = false;}
 
-  SNQV.ZYAU = function(JELS) {
-    if (HWTY == true){
-      SNQV.TMPD(JELS.key);
+  AVAD.GUOD = function(RCTZ) {
+    if (VKGS == true){
+      AVAD.DIDF(RCTZ.key);
     }
   }
 
-  SNQV.MDSM = function() {
-    window.removeEventListener("keypress", SNQV.ZYAU);
+  AVAD.QTTD = function() {
+    window.removeEventListener("keypress", AVAD.GUOD);
   }
 
-  window.addEventListener('keypress', SNQV.ZYAU);
+  window.addEventListener('keypress', AVAD.GUOD);
 }
 
 
